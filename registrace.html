@@ -1,0 +1,73 @@
+---
+layout: page.njk
+title: BB registrace
+---
+
+  <div class="form-title">
+    <h2>Registrační formulář</h2>
+  </div>
+
+
+  <form class="form" method="post" action="">
+        
+    <div class="form__item">
+      <label>Příjmení a jméno (první člen týmu)*</label>
+      <input type="text" id="Jmeno1" name="Jmeno1" autofocus required>
+    </div>
+      
+    <div class="form__item">
+      <label>Příjmení a jméno (druhý člen týmu)*</label>
+      <input type="text" id="Jmeno2" name="Jmeno2" required>
+    </div> 
+      
+    <div class="form__item">
+      <label for="Tym">Název týmu</label>
+      <input type="text" id="Tym" name="Tym">
+    </div>
+
+    <div class="form__item">
+      <label for="email">E-mail jednoho člena týmu *</label>
+      <input type="email" id="email" name="email" placeholder="bb@bloudil.cz" required>
+    </div>
+      
+    <div class="form__radio">
+      <legend>Vyber kategorii</legend>
+      
+        <div class="radio__item">
+          <input type="radio" id="MM" name="category" value="MM" required>
+          <label for="MM">MM (muž, muž) - 400,-Kč</label>
+        </div>
+        <div class="radio__item">
+          <input type="radio" id="MD" name="category" value="MD">
+          <label for="MD">MD (muž, žena) - 400,-Kč </label>
+        </div>
+        <div class="radio__item">
+          <input type="radio" id="DD" name="category" value="DD">
+          <label for="DD">DD (žena, žena) - 400,-Kč</label>
+        </div>
+        <div class="radio__item">
+          <input type="radio" id="DJ" name="category" value="DJ">
+          <label for="DJ">DJ (dospělý, junior do 15 let) - 400,-Kč</label>
+        </div>
+        <div class="radio__item">
+          <input type="radio" id="S" name="category" value="S">
+          <label for="S">Š - špunti (dospělý + dítě, které seveze) - 250,-Kč</label>
+        </div>
+        <div class="radio__item">
+          <input type="radio" id="E" name="category" value="E">
+          <label for="E">Elektrikáři - 400,-Kč</label>
+        </div>
+      </div>
+      
+      <div class="form__mes">
+        <legend>Zde nám můžete napsat nějaký vzkaz.</legend>
+        <textarea id="mess" name="message"></textarea>
+      </div>
+         
+      <p>
+         * Pole označená hvězdičkou jsou povinná.
+      </p>
+      
+        <button class="button" type="submit" id="send" name="send-reg">Potvrdit registraci</button>
+      
+    </form>

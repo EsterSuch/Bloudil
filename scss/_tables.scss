@@ -1,0 +1,38 @@
+@use 'colors' as *;
+
+
+.scrollable-table {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid $letter-main;
+}
+
+th, td{
+  text-align: center;
+  border: 1px solid $letter-main;
+}
+td {
+  color: $letter-second;
+  padding: 5px;
+}
+
+.tab-title th{
+  border: 1px solid $letter-main;
+  background-color: $bgd-main;
+  padding: 5px;
+}
+
+/*
+tr:nth-child(odd)
+{background-color: $bgd-second;}*/
+
+.result a{
+  display: block;
+  text-decoration: none;
+  color: $letter-main;
+}

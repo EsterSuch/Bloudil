@@ -1,0 +1,66 @@
+---
+layout: page.njk
+title: BB kontakty
+---
+    
+  <div class="form-title">
+    <h2>Kontaktní formulář</h2>
+  </div>
+      
+  <form class="form" metod="post" action="">
+      
+    <div class="form__item">
+      <label for="jmeno" >Jméno</label>
+      <input type="text" name="jmeno" id="jmeno">
+    </div>
+        
+    <div class="form__item">
+      <label for="email" >E-mail</label>
+      <input type="email" name="email" id="email">
+    </div>
+      
+    <div class="form__select">
+      <label for="dotaz" >Čeho se týká Váš dotaz/vzkaz</label>
+      <select name="dotaz" id="dotaz">
+        <option></option>
+        <option>Místo závodu</option>
+        <option>Registrace</option>
+        <option>Organizační věci</option>
+        <option>Ostatní</option>
+      </select>
+    </div>
+      
+    <div class="form__mes">
+      <label for="zprava" >Zpráva</label>
+        <textarea name="zprava" id="zprava"></textarea>
+    </div>
+        
+        
+      <button class="button" type="submit" name="odeslat" id="odeslat">Odeslat</button>
+      
+    </form>
+    
+    
+    <section class="contacts">
+      <div class="contact__item">
+        <img src="/images/mail.png">
+        <p>bukovsky.bloudil@gmail.com</p>
+      </div>
+
+      <div class="contact__item">
+        <img src="/images/fcb.png">
+        <a href="https://www.facebook.com/bukovskybloudil" target="_blank">Bukovský Bloudil</a>
+      </div>
+
+      <div class="contact__item">
+        <img src="/images/tlf.png">
+        <p>123 456 789</p>
+      </div>
+    </section>
+
+
+    <section class="mapa">
+      <h2>Místo konání závodu</h2>
+      <iframe style="border:none" src="https://frame.mapy.cz/s/hobolovodo" width= "100%" height="100%" frameborder="0"></iframe>
+    </section>
+

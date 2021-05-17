@@ -1,0 +1,32 @@
+@use 'colors' as *;
+
+/*CSS PROPOZICE*/
+
+.instruction a {
+  text-decoration: none;
+  color: $letter-main;
+}
+
+.instruction__text{
+  padding: 20px;
+}
+.instruction__item{
+  display: block;
+  margin-bottom: 15px;
+}
+.instruction__item h3{
+  font-size: 16px;
+  margin: 0;
+}
+.instruction__item p{
+  color: $letter-second;
+  margin: 0;
+}
+.instruction__item a{
+  text-decoration: none;
+  color: $letter-main
+}
+.instruction__item li{
+  list-style-type: none;
+  color: $letter-second;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <title> {{title}} </title>
+  </head>
+  <body>
+    
+    <section class="sirka">
+      <div class="top">
+        <div class="logoM">
+          <a href="/"><img src="/images/BB-logo-obr.png"></a>
+        </div>
+          <a href="/"><h2>MTBO závody</h2></a>
+      </div>
+
+    <nav class="menu">
+      <ul class="menu__list">
+        <a href="index.html"><img id="domek" src="/images/domek-hranaty.png"></a>
+          <li class="menu__item"><a class="menu__link" href="/aktuality/">Aktuality</a></li>
+          <li class="menu__item"><a class="menu__link" href="/registrace/">Registrace</a></li>
+          <div class="menu__mobil">
+            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+		          <label for="menu-checkbox" class="menu__toggler">Více</label>
+              <div class="menu__mobil--hidden">
+                <li class="menu__item"><a class="menu__link" href="/startovka/">Startovní listina</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fotovideo/">Foto & Video</a></li>
+                <li class="menu__item"><a class="menu__link" href="/vysledky/">Výsledky</a></li>
+                <li class="menu__item"><a class="menu__link" href="/propozice/">Propozice</a></li>
+                <li class="menu__item"><a class="menu__link" href="/kontakt/">Kontakt</a></li>
+              </div>
+          </div>
+       </ul>
+    </nav>
+    </section>
+    
+<main>
+
+{{ content | safe }}
+
+</main>
+
+  <footer>
+    <img id="footer__logo" src="/images/Footer-logo.png">
+    <p>Dost dobrá akce. Tak přijeď.</p>
+  </footer>
+
+    
+  </body>
+</html>

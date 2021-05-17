@@ -1,0 +1,93 @@
+@use 'colors' as *;
+
+/*FORMULÁŘ REGISTRACE + KONTAKT*/
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  padding: 0 20px;
+}
+
+.form-title h2{
+  text-align: center;
+}
+
+.form__item,
+.form__radio,
+.form__select select,
+.form__mes{
+  display: block;
+  margin-bottom: 20px;
+}
+.form__item input,
+.form__mes textarea,
+.form__select select{
+  width: 100%;
+  margin-top: 5px;
+  height: 30px;
+  background-color: $bgd-main;
+  color: $letter-second;
+  font-size: 16px;
+  font-family: $font;
+}
+.form__item label,
+.form__item legend,
+.form__mes legend,
+.form__radio legend {
+  font-size: 18px;
+  color: $letter-main;
+  margin-bottom: 10px;
+}
+.radio__item [type="radio"]{
+  margin: 5px 0;
+  height: 15px;
+  width: 15px;
+}
+
+.form__mes textarea{
+  height: 150px;
+  padding: 12px 10px;
+  resize: none;
+}
+
+.form__item [type="text"],
+.form__item [type="email"],
+select,
+textarea{
+  border: none;
+  border-bottom: 3px solid $letter-main;
+}
+
+.button {
+  background-color: $letter-main;
+  color: $letter-second;
+  border: 1px solid $letter-main;
+  display: flex;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 16px;
+  margin-bottom: 15px;
+  
+    & a {
+      text-decoration: none;
+      color: $letter-second;
+    }
+    &:hover {
+      background-color: $bgd-main;
+      color: $letter-main;
+      cursor: pointer;
+    }
+}
+
+.sipka {
+  bottom: 0;
+  right: 10px;
+  position: fixed;
+  }
+
+.sipka img {
+  background-color: $letter-main;
+  width: 40px;
+}

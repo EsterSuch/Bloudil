@@ -1,0 +1,27 @@
+@use 'colors' as *;
+@use 'forms-btn' as *;
+
+/*KONTAKTY*/
+
+.contacts {
+  display: block;
+  text-align: center;
+  margin: 35px 0 25px 0;
+}
+.contacts p,
+.contacts a {
+  font-size: 18px;
+  text-decoration: none;
+  color: $letter-main;
+}
+
+.contact__item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__item img{
+  width: 8%;
+  height: 8%;
+  margin-right: 10px;
+}
