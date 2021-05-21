@@ -37,7 +37,7 @@
 .form__item legend,
 .form__mes legend,
 .form__radio legend {
-  font-size: 15px;
+  font-size: 16px;
   color: $letter-main;
   margin-bottom: 10px;
 }
@@ -63,7 +63,7 @@ textarea{
 
 .button {
   background-color: $letter-main;
-  color: $letter-second;
+  color: $bgd-second;
   border: 2px solid $letter-main;
   border-radius: 20px;
   display: flex;
@@ -72,15 +72,17 @@ textarea{
   font-size: 16px;
   margin-bottom: 15px;
 
-  
     & a {
       text-decoration: none;
-      color: $letter-second;
+      color: $bgd-main;
     }
     &:hover {
       background-color: transparent;
-      color: $letter-main;
+      color: $letter-second;
       cursor: pointer;
+    }
+    &:hover a {
+      color: $letter-main;
     }
 }
 

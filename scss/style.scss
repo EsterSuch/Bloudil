@@ -140,7 +140,8 @@ body{
 
 .news {
   display: flex;
-  /*justify-content: space-around;*/
+  flex-direction: column;
+  margin: 0;
 }
 
 

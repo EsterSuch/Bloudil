@@ -37,7 +37,7 @@
 .form__item legend,
 .form__mes legend,
 .form__radio legend {
-  font-size: 15px;
+  font-size: 16px;
   color: #10D817;
   margin-bottom: 10px;
 }
@@ -64,7 +64,7 @@ textarea {
 
 .button {
   background-color: #10D817;
-  color: white;
+  color: #4a4a4f;
   border: 2px solid #10D817;
   border-radius: 20px;
   display: flex;
@@ -75,12 +75,15 @@ textarea {
 }
 .button a {
   text-decoration: none;
-  color: white;
+  color: #38383D;
 }
 .button:hover {
   background-color: transparent;
-  color: #10D817;
+  color: white;
   cursor: pointer;
+}
+.button:hover a {
+  color: #10D817;
 }
 
 .newsB {
@@ -140,7 +143,7 @@ textarea {
   display: block;
   color: #10D817;
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
   border: 1px solid #4a4a4f;
 }
 .menu__link:hover, .menu__toggler:hover {
@@ -385,6 +388,10 @@ tr:nth-child(odd)
   font-size: 14px;
 }
 
+.index__item {
+  margin-left: 10px;
+}
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -533,7 +540,8 @@ body {
 
 .news {
   display: flex;
-  /*justify-content: space-around;*/
+  flex-direction: column;
+  margin: 0;
 }
 
 .sponsors {
