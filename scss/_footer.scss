@@ -7,9 +7,12 @@ footer{
   align-items: center;
   background-color: $bgd-main;
   padding: 10px;
+  bottom: 0;
+  /*position: fixed;*/
 }
 footer p{
   font-size: 20px;
+  margin: 0;
 }
 #footer__logo{
   max-height: 15%;

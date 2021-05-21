@@ -3,16 +3,17 @@ layout: page.njk
 title: BB registrace
 ---
 
+<section class="sirka">
+
   <div class="form-title">
     <h2>Registrační formulář</h2>
   </div>
-
 
   <form class="form" method="post" action="">
         
     <div class="form__item">
       <label>Příjmení a jméno (první člen týmu)*</label>
-      <input type="text" id="Jmeno1" name="Jmeno1" autofocus required>
+      <input type="text" id="Jmeno1" name="Jmeno1" required>
     </div>
       
     <div class="form__item">
@@ -51,7 +52,7 @@ title: BB registrace
         </div>
         <div class="radio__item">
           <input type="radio" id="S" name="category" value="S">
-          <label for="S">Š - špunti (dospělý + dítě, které seveze) - 250,-Kč</label>
+          <label for="S">Š - špunti (dospělý + dítě, které se veze) - 250,-Kč</label>
         </div>
         <div class="radio__item">
           <input type="radio" id="E" name="category" value="E">
@@ -71,3 +72,5 @@ title: BB registrace
         <button class="button" type="submit" id="send" name="send-reg">Potvrdit registraci</button>
       
     </form>
+
+  </section>

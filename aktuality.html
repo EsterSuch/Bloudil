@@ -1,0 +1,22 @@
+---
+layout: news-list.njk
+---
+
+<section class="sirka">
+
+  
+    {% for novinky in collections.aktuality | reverse %}
+
+  <div class="news__list">
+
+    <div class="news__item">
+      <h2>{{ novinky.data.title }}</h2>
+      <p>Datum: {{ novinky.data.date.toLocaleString('cs-CZ') }}</p>
+      <p><a href="{{ novinky.url }}">Více...</a></p>
+
+      <img src="/images/{{ novinky.data.foto }}" alt="{{ novinky.data.alt }}">  </div>
+  </div>
+
+  {% endfor %}
+
+</section>

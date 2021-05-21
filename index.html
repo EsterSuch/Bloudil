@@ -39,26 +39,33 @@ title: BB úvod
 </section>
 
 <section class="gallery">
-  <div class="gallery--width sirka">
-    <img src="/images/12s.jpg" alt="BB1">
-    <img src="/images/1s.jpg" alt="BB3">
-    <img src="/images/7s.jpg" alt="BB4">
-    <img src="/images/13s.jpg" alt="medaile">
-    <img src="/images/21s.jpg" alt="dobrota">
+  <div class="sirka">
+    <div class="gallery__photo">
+      <img src="/images/12s.jpg" alt="BB1">
+      <img src="/images/7s.jpg" alt="BB4">
+      <img src="/images/13s.jpg" alt="dobrota">
+    </div>
+
+    <p class="gallery__text">Pokud Vás zajímá, jak to při takovém závodě doopravdy vypadá, koukněte na další fotky a video z loňského nultého ročníku.</p>
+
+    <button class="button"><a href="/fotovideo/">Další fotky</a></button>
+
   </div>
-  <button class="button"><a href="/fotovideo/">Další fotky</a></button>
 </section>
 
 <section class="news">
   <div class="sirka">
-    <div class="news__item">
-      <h3>Co je nového</h3>
-      <p>Copak je asi nového. Nic. :-)</p>
-    </div>
-    <div class="news__item">
-      <h3>Co je nového</h3>
-      <p>Copak je asi nového. Nic. :-)</p>
-    </div>
+    
+    {% for novinky in collections.aktuality | limit(2) %}
+      <div class="index__news">
+        <div class="index__item">
+          <h2>{{ novinky.data.title }}</h2>
+          <p>Datum: {{ novinky.data.date.toLocaleString('cs-CZ') }}</p>
+          <p><a href="{{ novinky.url }}">Více...</a></p>
+        </div>
+      </div>
+    {% endfor %}
+
   </div>
 </section>
 
@@ -71,10 +78,10 @@ title: BB úvod
     <img src="/images/Sklenarstvi_Pech.png" alt="Sklenarstvi_Pech">
     <img src="/images/truhlar.png" alt="truhlar">
     </div>
-    <p>mami – uvařila skvělý guláš, napekla dokonalé vdolky, buchty a další dobroty</p>
-    <p>Běla, její dcera Běla a její dcera Johanka – pomoc při registraci, focení a krmení našich hladových závodníků</p>
-    <p>obec Buková – poskytnutí zázemí u rybníku Brůdek</p>
-    <p>Karel, Petr, Martin, Jitka a Jituška - pomoc při přípravě areálu a svážení lampionků po závodě</p>
+    <p><span style="color: white">mami</span> – uvařila skvělý guláš, napekla dokonalé vdolky, buchty a další dobroty</p>
+    <p><span style="color: white">Běla, její dcera Běla a její dcera Johanka</span> – pomoc při registraci, focení a krmení našich hladových závodníků</p>
+    <p><span style="color: white">obec Buková</span> – poskytnutí zázemí u rybníku Brůdek</p>
+    <p><span style="color: white">Karel, Petr, Martin, Jitka a Jituška</span> - pomoc při přípravě areálu a svážení lampionků po závodě</p>
   </div>
 </section>
 

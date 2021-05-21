@@ -4,6 +4,10 @@ module.exports = function(eleventyConfig) {
 eleventyConfig.addPassthroughCopy("images");
 // Zkopírovat css/ to _site/css/
 eleventyConfig.addPassthroughCopy("css");
+// Limit pro zobrazení článků na hlavní stránce //
+eleventyConfig.addFilter("limit", function (arr, limit) {
+  return arr.slice(0, limit)
+});
 
 // ...necháme, co už v konfiguraci je, a přidáme:
 return {

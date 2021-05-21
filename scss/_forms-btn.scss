@@ -7,11 +7,12 @@
   max-width: 400px;
   margin: 0 auto;
   display: block;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .form-title h2{
-  text-align: center;
+  text-align: left;
+  padding: 0px 10px;
 }
 
 .form__item,
@@ -19,7 +20,7 @@
 .form__select select,
 .form__mes{
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .form__item input,
 .form__mes textarea,
@@ -29,14 +30,14 @@
   height: 30px;
   background-color: $bgd-main;
   color: $letter-second;
-  font-size: 16px;
+  font-size: 13px;
   font-family: $font;
 }
 .form__item label,
 .form__item legend,
 .form__mes legend,
 .form__radio legend {
-  font-size: 18px;
+  font-size: 15px;
   color: $letter-main;
   margin-bottom: 10px;
 }
@@ -63,24 +64,30 @@ textarea{
 .button {
   background-color: $letter-main;
   color: $letter-second;
-  border: 1px solid $letter-main;
+  border: 2px solid $letter-main;
+  border-radius: 20px;
   display: flex;
-  padding: 10px;
+  padding: 5px 10px;
   margin: 0 auto;
   font-size: 16px;
   margin-bottom: 15px;
+
   
     & a {
       text-decoration: none;
       color: $letter-second;
     }
     &:hover {
-      background-color: $bgd-main;
+      background-color: transparent;
       color: $letter-main;
       cursor: pointer;
     }
 }
 
+.newsB {
+  display: flex;
+  margin: 0;
+}
 .sipka {
   bottom: 0;
   right: 10px;
@@ -89,5 +96,6 @@ textarea{
 
 .sipka img {
   background-color: $letter-main;
-  width: 40px;
+  width: 30px;
 }
+

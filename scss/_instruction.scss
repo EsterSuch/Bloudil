@@ -2,13 +2,38 @@
 
 /*CSS PROPOZICE*/
 
-.instruction a {
-  text-decoration: none;
+/*
+.instruction li{
+  color: $letter-main;
+  font-size: 15px;
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+  justify-content: flex-start;
+}*/
+
+.instruction ul{
+  padding: 15px;
+}
+.instruction li{
+  list-style-type: none;
+  display: flex;
   color: $letter-main;
 }
 
+.instruction p{
+  padding: 0;
+  margin: 0 0 0 3px;
+  color: $letter-second;
+}
+
+.instruction a {
+  text-decoration: none;
+  color: $letter-second;
+}
+
 .instruction__text{
-  padding: 20px;
+  padding: 15px;
 }
 .instruction__item{
   display: block;
@@ -18,9 +43,10 @@
   font-size: 16px;
   margin: 0;
 }
-.instruction__item p{
+.instruction__item p, li{
   color: $letter-second;
   margin: 0;
+  font-size: 14px;
 }
 .instruction__item a{
   text-decoration: none;
@@ -28,5 +54,4 @@
 }
 .instruction__item li{
   list-style-type: none;
-  color: $letter-second;
 }

@@ -1,0 +1,44 @@
+@use 'colors' as *;
+
+.news__list {
+  display: flex;
+}
+.news__list img{
+  max-width: 100%;
+}
+
+.article {
+  /*display: flex;
+  flex-direction: column;*/
+  padding: 0 20px;
+}
+
+.article__text a {
+  text-decoration: none;
+  color: $letter-second;
+    &:hover{
+      border-bottom: 1px solid $letter-main;
+    }
+}
+
+.article__img {
+  justify-content: center;
+}
+
+.news__item a {
+  text-decoration: none;
+  color: $letter-main;
+}
+
+/*CSS pro novinky na hlavní stránce*/
+.index__item h2 {
+  font-size: 16px;
+}
+.index__item p {
+  font-size: 12px;
+}
+.index__item a {
+  text-decoration: none;
+  color: $letter-main;
+  font-size: 14px;
+}

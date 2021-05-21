@@ -1,0 +1,21 @@
+---
+layout: news-list.njk
+---
+
+<article class="article">
+
+<button class="button newsB"><a href="/aktuality/">zpět</a></button>
+
+
+<h3>{{ title }}</h3>
+<p>Publikováno: {{page.date.toLocaleString('cs-CZ')}}</p>
+
+  <div class="article__content">
+    
+  {{ content | safe }}
+
+  </div>
+
+<img class="article__img" src="/images/{{ foto }}" alt="{{ alt }}">
+  
+</article>

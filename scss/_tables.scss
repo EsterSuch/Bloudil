@@ -3,6 +3,7 @@
 
 .scrollable-table {
   overflow-x: auto;
+  font-size: 12px;
 }
 
 table {
@@ -15,16 +16,16 @@ table {
 th, td{
   text-align: center;
   border: 1px solid $letter-main;
+  padding: 3px;
 }
 td {
   color: $letter-second;
-  padding: 5px;
+  
 }
 
 .tab-title th{
-  border: 1px solid $letter-main;
   background-color: $bgd-main;
-  padding: 5px;
+  padding: 2px;
 }
 
 /*
