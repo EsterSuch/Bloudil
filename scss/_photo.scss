@@ -1,6 +1,6 @@
 @use 'colors' as *;
 
-.video{
+.video, .foto{
   display: inline-blok;
   text-align: center;
 }
@@ -9,8 +9,31 @@
   max-height: 100%;
   margin-bottom: 20px;
 }
+
+/*width="560" height="315"*/
+
 .video p{
   font-size: 18px;
 }
 
-/*width="560" height="315"*/
+.photo {
+  margin-bottom: 10px;
+}
+.photo a {
+  text-decoration: none;
+  color: $letter-second;
+}
+
+.photo__list img {
+  width: 100%;
+}
+
+.photo__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.photo__list img {
+	width: 100%;
+}

@@ -122,7 +122,6 @@ textarea {
 .menu__list {
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
   padding: 0;
   margin: 20px 0;
 }
@@ -143,7 +142,7 @@ textarea {
   display: block;
   color: #10D817;
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   border: 1px solid #4a4a4f;
 }
 .menu__link:hover, .menu__toggler:hover {
@@ -264,6 +263,16 @@ footer p {
   list-style-type: none;
 }
 
+#penalizace {
+  color: white;
+  margin-top: 5px;
+}
+
+#penalizace li {
+  color: white;
+  margin-top: 5px;
+}
+
 .scrollable-table {
   overflow-x: auto;
   font-size: 12px;
@@ -300,7 +309,7 @@ tr:nth-child(odd)
   color: #10D817;
 }
 
-.video {
+.video, .foto {
   display: inline-blok;
   text-align: center;
 }
@@ -311,11 +320,34 @@ tr:nth-child(odd)
   margin-bottom: 20px;
 }
 
+/*width="560" height="315"*/
 .video p {
   font-size: 18px;
 }
 
-/*width="560" height="315"*/
+.photo {
+  margin-bottom: 10px;
+}
+
+.photo a {
+  text-decoration: none;
+  color: white;
+}
+
+.photo__list img {
+  width: 100%;
+}
+
+.photo__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.photo__list img {
+  width: 100%;
+}
+
 /*KONTAKTY*/
 .contacts {
   display: block;
@@ -366,6 +398,20 @@ tr:nth-child(odd)
 
 .article__img {
   justify-content: center;
+  max-width: 100%;
+}
+
+.article__content {
+  color: white;
+}
+
+.article__content h4 {
+  color: #10D817;
+}
+
+.article__content a {
+  text-decoration: none;
+  color: #10D817;
 }
 
 .news__item a {

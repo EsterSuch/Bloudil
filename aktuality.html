@@ -10,7 +10,7 @@ layout: news-list.njk
   <div class="news__list">
 
     <div class="news__item">
-      <h2>{{ novinky.data.title }}</h2>
+      <h2><a href="{{ novinky.url }}">{{ novinky.data.title }}</a></h2>
       <p>Datum: {{ novinky.data.date.toLocaleString('cs-CZ') }}</p>
       <p><a href="{{ novinky.url }}">Více...</a></p>
 

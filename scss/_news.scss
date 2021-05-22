@@ -23,7 +23,20 @@
 
 .article__img {
   justify-content: center;
+  max-width: 100%;
 }
+
+.article__content {
+  color: $letter-second;
+}
+.article__content h4{
+  color: $letter-main;
+}
+.article__content a {
+  text-decoration: none;
+  color: $letter-main;
+}
+
 
 .news__item a {
   text-decoration: none;

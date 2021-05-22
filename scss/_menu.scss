@@ -19,7 +19,6 @@
 .menu__list{
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
   padding: 0;
   margin: 20px 0;
 }
@@ -39,7 +38,7 @@
   display: block;
   color: $letter-main;
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   border: 1px solid $bgd-second;
   
     &:hover {
