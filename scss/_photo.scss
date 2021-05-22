@@ -12,7 +12,7 @@
 
 /*width="560" height="315"*/
 
-.video p{
+.video p, .photo p{
   font-size: 18px;
 }
 
@@ -24,7 +24,6 @@
   text-decoration: none;
   color: $letter-second;
 }
-
 
 .photo__list {
 	display: grid;

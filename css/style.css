@@ -321,7 +321,7 @@ tr:nth-child(odd)
 }
 
 /*width="560" height="315"*/
-.video p {
+.video p, .photo p {
   font-size: 18px;
 }
 

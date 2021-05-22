@@ -8,17 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;800&display=swap" rel="stylesheet">
    
-<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
-<link rel="manifest" href="/icon/site.webmanifest">
-<link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/icon/favicon.ico">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="/icon/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+  <link rel="manifest" href="/icon/site.webmanifest">
+  <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/icon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/icon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 
-
+  <meta property="og:title" content="">   <!--titulek si fcb načte z titulku. To samé i u ostaních položek-->
+	<meta property="og:description" content="">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="{{ foto }}">
+	<meta property="og:url" content="https://bukovskybloudil.netlify.app/">
+	<meta property="og:locale" content="cs_CZ">
 
      <title> {{title}} </title>
 
@@ -46,8 +51,10 @@
 
           <div class="menu__mobil">
 
+
             <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-		          <label for="menu-checkbox" class="menu__toggler" onclick="openNav()">Více</label>
+		          <label for="menu-checkbox" class="menu__toggler">Více</label>
+              
               <div class="menu__mobil--hidden">
 
                 <li class="menu__item {{'menu__item--active' if page.fileSlug === 'startovka'}}">
@@ -85,6 +92,7 @@
     <p>Dost dobrá akce. Tak přijeď.</p>
   </footer>
 
-  <script src="/lightbox/fslightbox.js"></script> 
+  <script src="/lightbox/fslightbox.js"></script>
+  <script src="/menu-js/menu.js"></script> 
   </body>
 </html>

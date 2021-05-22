@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
 eleventyConfig.addPassthroughCopy("images");
 eleventyConfig.addPassthroughCopy("icon");  //favicon mám ve složce icon
 eleventyConfig.addPassthroughCopy("lightbox");
+eleventyConfig.addPassthroughCopy("menu-js");
 // Zkopírovat css/ to _site/css/
 eleventyConfig.addPassthroughCopy("css");
 // Limit pro zobrazení článků na hlavní stránce //
