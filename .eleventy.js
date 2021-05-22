@@ -1,7 +1,9 @@
 module.exports = function(eleventyConfig) {
 // Výchozí výstupní složka je: _site
-// Zkopírovat images/ do _site/images
+// Zkopírovat images/ do _site/images, to samé s favicon atd.
 eleventyConfig.addPassthroughCopy("images");
+eleventyConfig.addPassthroughCopy("icon");  //favicon mám ve složce icon
+eleventyConfig.addPassthroughCopy("lightbox");
 // Zkopírovat css/ to _site/css/
 eleventyConfig.addPassthroughCopy("css");
 // Limit pro zobrazení článků na hlavní stránce //
