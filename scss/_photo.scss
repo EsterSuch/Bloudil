@@ -24,10 +24,6 @@
   color: $letter-second;
 }
 
-.photo__list img {
-  width: 100%;
-}
-
 .photo__list {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -35,5 +31,5 @@
 }
 
 .photo__list img {
-	width: 100%;
+	width: 80%;
 }
