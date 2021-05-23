@@ -27,7 +27,6 @@ body{
   max-width: 1100px;
   margin: 0 auto;
   padding: 10px;
-  margin-bottom: 20px;
 }
 
 /*nadpis-obrázek a MTBO nad menu*/
@@ -40,8 +39,8 @@ body{
   text-align: center;
 }
 .logoM img{
-  max-height: 70%;
-  max-width: 70%;
+  max-height: 60%;
+  max-width: 60%;
   margin-top: 10px;
 }
 .top a{
@@ -90,6 +89,7 @@ body{
 
 /*JEDNOTLIVÉ SEKCE HLAVNÍ STRÁNKY*/
 
+/*boxíky s info, jak závod probíhá*/
 .box{
   display: block;
   padding: 20px 0;
@@ -117,6 +117,8 @@ body{
   max-width: 20%;
 }
 
+/*fotky na hlavní stránce*/
+
 .gallery{
   background-color: $bgd-main;
   display: flex;
@@ -138,13 +140,15 @@ body{
   padding: 5px;
 }
 
-.news {
+/* Novinky*/
+.news,
+.news--count {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 
-
+/*Sponzoři*/
 .sponsors{
   background-color: $bgd-main;
   padding: 15px 0;
@@ -163,6 +167,8 @@ body{
   text-align: center;
 }
 
+/*Oblast s mapou a kontakty*/
+
 .mapa{
   background-color: $bgd-second;
   padding: 15px;
@@ -170,4 +176,61 @@ body{
   text-align: center;
 }
 
+/*   MEDIA QUERY PRO MIN 900px   */
+
+@media screen and (min-width: 990px){
+  .hero__text h1{
+    font-size: 50px;  
+  }
+  .hero__text p{
+    font-size: 30px;
+  }
+  .box {
+    display: flex;
+  }
+  .box__item {
+    flex: 1 1 calc( 100% / 3);
+    padding: 20px;
+  }
+  .gallery__photo{
+    display: flex;
+    
+  }
+  .gallery__photo img {
+    flex-basis: calc(100% / 3);
+    overflow: hidden;
+  }
+  #photo--middle {
+    margin: 0 30px;
+  }
+  .news{
+    display: none;
+  }
+  .news--count {
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+  .news--count a{
+    font-size: 20px;
+  }
+  .sponsors__foto{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+  }
+  
+  .contact__main{
+    display: flex;
+  }
+  .contact__item {
+    align-items: left;
+    justify-content: left;
+  }
+  
+  .mapa {
+    width: 120%;
+  }
+  
+}
 
