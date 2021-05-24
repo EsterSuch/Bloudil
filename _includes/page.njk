@@ -63,13 +63,13 @@
                 <a class="menu__link" href="/startovka/">Startovní listina</a>
                 </li>
 
-                <li class="menu__item {{'menu__item--active' if page.fileSlug === 'fotovideo'}}">
-                <a class="menu__link" href="/fotovideo/">Foto & Video</a>
-                </li>
-
                 <li class="menu__item {{'menu__item--active' if page.fileSlug === 'vysledky'}}">
                 <a class="menu__link" href="/vysledky/">Výsledky</a>
                 </li>
+
+                <li class="menu__item {{'menu__item--active' if page.fileSlug === 'fotovideo'}}">
+                <a class="menu__link" href="/fotovideo/">Foto & Video</a>
+                </li>                
 
                 <li class="menu__item {{'menu__item--active' if page.fileSlug === 'propozice'}}">
                 <a class="menu__link" href="/propozice/">Propozice</a>
@@ -91,7 +91,10 @@
 
   <footer>
     <img id="footer__logo" src="/images/Footer-logo.png">
-    <p>Dost dobrá akce. Tak přijeď.</p>
+    <div>
+      <p>Dost dobrá akce.</p>
+      <p>Tak přijeď.</p>
+    </div>
   </footer>
 
   <script src="/lightbox/fslightbox.js"></script>

@@ -176,7 +176,7 @@ body{
   text-align: center;
 }
 
-/*   MEDIA QUERY PRO MIN 900px   */
+/*   MEDIA QUERY PRO MIN 990px   */
 
 @media screen and (min-width: 990px){
   .hero__text h1{
@@ -220,16 +220,27 @@ body{
     column-gap: 10px;
   }
   
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
   .contact__main{
     display: flex;
   }
   .contact__item {
-    align-items: left;
+    display: flex;
+    align-items: center;
     justify-content: left;
+  }
+  .contact__item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
   }
   
   .mapa {
-    width: 120%;
+    width: 100%;
   }
   
 }

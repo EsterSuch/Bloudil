@@ -2,7 +2,7 @@
 /*FORMULÁŘ REGISTRACE + KONTAKT*/
 .form {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   margin: 0 auto;
   display: block;
   padding: 0 10px;
@@ -10,7 +10,8 @@
 
 .form-title h2 {
   text-align: left;
-  padding: 0px 10px;
+  padding: 0;
+  margin: 0 0 20px 0;
 }
 
 .form__item,
@@ -189,7 +190,6 @@ footer {
   background-color: #38383D;
   padding: 10px;
   bottom: 0;
-  /*position: fixed;*/
 }
 
 footer p {
@@ -198,11 +198,16 @@ footer p {
 }
 
 #footer__logo {
-  max-height: 15%;
-  max-width: 15%;
+  max-width: 60px;
   margin-right: 10px;
 }
 
+@media screen and (min-width: 990px) {
+  #footer__logo {
+    max-width: 90px;
+    margin-right: 10px;
+  }
+}
 /*CSS PROPOZICE*/
 .instruction ul {
   padding: 15px;
@@ -273,6 +278,7 @@ footer p {
 .scrollable-table {
   overflow-x: auto;
   font-size: 12px;
+  margin: 0 auto;
 }
 
 table {
@@ -297,18 +303,23 @@ td {
   padding: 2px;
 }
 
-/*
-tr:nth-child(odd)
-{background-color: $bgd-second;}*/
 .result a {
   display: block;
   text-decoration: none;
   color: #10D817;
 }
 
-.video, .foto {
-  display: inline-blok;
-  text-align: center;
+@media screen and (min-width: 990px) {
+  .table__layout {
+    max-width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+.video, .photo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .video iframe {
@@ -317,32 +328,50 @@ tr:nth-child(odd)
   margin-bottom: 20px;
 }
 
-/*width="560" height="315"*/
 .video p, .photo p {
   font-size: 18px;
-}
-
-.photo {
-  margin-bottom: 10px;
-  text-align: center;
+  margin: 0 0 5px 0;
 }
 
 .photo a {
   text-decoration: none;
   color: white;
+  margin: 0;
 }
 
 .photo__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  grid-auto-flow: row dense;
 }
 
 .photo__list img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   justify-items: center;
 }
 
+@media screen and (min-width: 990px) {
+  .video__layout {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .photo__list a:nth-child(6n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .video iframe {
+    max-width: 560px;
+    max-height: 315px;
+    margin-bottom: 20px;
+  }
+}
+/*width="560" height="315"*/
 /*KONTAKTY*/
 .contacts {
   display: block;
@@ -371,6 +400,7 @@ tr:nth-child(odd)
 
 .news__list {
   display: flex;
+  flex-direction: column;
 }
 
 .news__list img {
@@ -378,8 +408,6 @@ tr:nth-child(odd)
 }
 
 .article {
-  /*display: flex;
-  flex-direction: column;*/
   padding: 0 20px;
 }
 
@@ -433,6 +461,21 @@ tr:nth-child(odd)
   margin-left: 10px;
 }
 
+@media screen and (min-width: 990px) {
+  .news__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+
+  .news__item img {
+    max-width: 90%;
+  }
+
+  .news__item {
+    margin-left: 30px;
+  }
+}
 html {
   box-sizing: border-box;
   height: 100%;
@@ -617,7 +660,7 @@ body {
   text-align: center;
 }
 
-/*   MEDIA QUERY PRO MIN 900px   */
+/*   MEDIA QUERY PRO MIN 990px   */
 @media screen and (min-width: 990px) {
   .hero__text h1 {
     font-size: 50px;
@@ -670,16 +713,29 @@ body {
          column-gap: 10px;
   }
 
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
   .contact__main {
     display: flex;
   }
 
   .contact__item {
-    align-items: left;
+    display: flex;
+    align-items: center;
     justify-content: left;
   }
 
+  .contact__item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
   .mapa {
-    width: 120%;
+    width: 100%;
   }
 }

@@ -2,14 +2,13 @@
 
 .news__list {
   display: flex;
+  flex-direction: column;
 }
 .news__list img{
   max-width: 100%;
 }
 
 .article {
-  /*display: flex;
-  flex-direction: column;*/
   padding: 0 20px;
 }
 
@@ -37,7 +36,6 @@
   color: $letter-main;
 }
 
-
 .news__item a {
   text-decoration: none;
   color: $letter-main;
@@ -58,4 +56,19 @@
 
 .index__item {
   margin-left: 10px;
+}
+
+@media screen and (min-width: 990px){
+  .news__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+  .news__item img{
+    max-width: 90%;
+  }
+  .news__item {
+    margin-left: 30px;
+  }
+
 }
