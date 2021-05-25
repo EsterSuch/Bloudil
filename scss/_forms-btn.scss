@@ -64,7 +64,7 @@ textarea{
 
 .button {
   background-color: $letter-main;
-  color: $bgd-second;
+  color: $letter-second;
   border: 2px solid $letter-main;
   border-radius: 20px;
   display: flex;
@@ -75,11 +75,11 @@ textarea{
 
     & a {
       text-decoration: none;
-      color: $bgd-main;
+      color: $letter-second;
     }
     &:hover {
       background-color: transparent;
-      color: $letter-second;
+      color: $letter-main;
       cursor: pointer;
     }
     &:hover a {

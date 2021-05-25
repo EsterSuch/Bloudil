@@ -62,7 +62,7 @@ body{
   position: relative;
   height: 400px;
  }
-
+ 
 .hero__text {
   text-align: center;
  /* justify-content: center;*/
@@ -75,7 +75,7 @@ body{
   padding: 20px;
 }
 .hero__text h1{
-  font-size: 30px;  /*na větší obrazovku 57px*/
+  font-size: 30px;  
   margin: 25px 0;
   padding: 0;
   color: $letter-second;
@@ -83,8 +83,8 @@ body{
 }
 .hero__text p{
   margin-bottom: 15px;
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 /*JEDNOTLIVÉ SEKCE HLAVNÍ STRÁNKY*/
@@ -141,11 +141,13 @@ body{
 }
 
 /* Novinky*/
-.news,
-.news--count {
+.news {
   display: flex;
   flex-direction: column;
   margin: 0;
+}
+.news--count {
+  display: none;
 }
 
 /*Sponzoři*/
@@ -176,6 +178,57 @@ body{
   text-align: center;
 }
 
+/*MEDIA QUERY PRO MIN 600px*/
+
+@media screen and (min-width: 600px) {
+  .hero__text h1 {
+    font-size: 40px;
+  }
+  .hero__text p{
+    font-size: 35px;
+  }
+  .box {
+    display: flex;
+    margin: 0 10px; 
+  }
+  .box__item {
+    flex-basis: calc(100% / 3);
+    margin: 5px;
+    padding: 15px;
+  }
+  .gallery__photo {
+    display: flex;
+  }
+  .gallery__photo img {
+    flex-basis: calc(100% / 3);
+    overflow: hidden;
+    margin: 5px;
+  }
+  .news {
+    display: none;
+  }
+  .news--count {
+    display: flex;
+    justify-content: space-around;
+  }
+  .sponsors__foto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .sponsors__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .mapa iframe {
+    width: 100%;
+  }
+}
 /*   MEDIA QUERY PRO MIN 990px   */
 
 @media screen and (min-width: 990px){
@@ -183,26 +236,24 @@ body{
     font-size: 50px;  
   }
   .hero__text p{
-    font-size: 30px;
+    font-size: 35px;
   }
-  .box {
-    display: flex;
-  }
-  .box__item {
-    flex: 1 1 calc( 100% / 3);
-    padding: 20px;
-  }
+  
+  .box,
   .gallery__photo{
     display: flex;
-    
   }
+  .box {
+    margin: 0;
+  }
+  .box__item,
   .gallery__photo img {
     flex-basis: calc(100% / 3);
     overflow: hidden;
+    margin: 0 5px;
+    justify-content: space-around;
   }
-  #photo--middle {
-    margin: 0 30px;
-  }
+  
   .news{
     display: none;
   }
@@ -219,15 +270,18 @@ body{
     grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
   }
-  
+
+  .contact__main{
+    display: flex;
+    justify-content: space-around;
+  }
   .contacts {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    
   }
-  .contact__main{
-    display: flex;
-  }
+  
   .contact__item {
     display: flex;
     align-items: center;
@@ -238,9 +292,8 @@ body{
     height: 50px;
     margin-bottom: 15px;
   }
-  
   .mapa {
-    width: 100%;
+    margin: 0;
   }
   
 }

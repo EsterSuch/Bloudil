@@ -13,7 +13,7 @@
 
 .video p, .photo p{
   font-size: 18px;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 
 .photo a {
@@ -25,10 +25,9 @@
 .photo__list {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 1px;
+	gap: 3px;
   grid-auto-flow: row dense;
 }
-
 
 .photo__list img {
 	width: 100%;
@@ -37,11 +36,25 @@
   justify-items: center;
 }
 
+@media screen and (min-width: 600px) {
+  .photo__list a:nth-child(5n){
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .video iframe {
+    width: 560px;
+    height: 315px;
+  }
+}
+
 
 @media screen and (min-width: 990px) {
   .video__layout {
     display: flex;
     justify-content: space-around;
+  }
+  .video {
+    margin: 0 10px;
   }
 
   .photo__list a:nth-child(6n){
@@ -49,10 +62,6 @@
     grid-row: span 2;
   }
 
-  .video iframe{
-    max-width: 560px;
-    max-height: 315px;
-    margin-bottom: 20px;
-  }
+  
 }
 /*width="560" height="315"*/

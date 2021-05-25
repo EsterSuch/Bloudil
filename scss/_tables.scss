@@ -3,7 +3,7 @@
 
 .scrollable-table {
   overflow-x: auto;
-  font-size: 12px;
+  font-size: 15px;
   margin: 0 auto;
 }
 
@@ -21,7 +21,6 @@ th, td{
 }
 td {
   color: $letter-second;
-  
 }
 
 .tab-title th{
@@ -37,9 +36,12 @@ td {
 
 @media screen and (min-width: 990px) {
   .table__layout {
-    max-width: 90%;
+    width: 90%;
     margin: 0 auto;
     justify-content: center;
+  }
+  .table__layout h3 {
+    margin: 30px 0 5px 0;
   }
   
 }

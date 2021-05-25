@@ -65,7 +65,7 @@ textarea {
 
 .button {
   background-color: #10D817;
-  color: #4a4a4f;
+  color: white;
   border: 2px solid #10D817;
   border-radius: 20px;
   display: flex;
@@ -76,11 +76,11 @@ textarea {
 }
 .button a {
   text-decoration: none;
-  color: #38383D;
+  color: white;
 }
 .button:hover {
   background-color: transparent;
-  color: white;
+  color: #10D817;
   cursor: pointer;
 }
 .button:hover a {
@@ -277,7 +277,7 @@ footer p {
 
 .scrollable-table {
   overflow-x: auto;
-  font-size: 12px;
+  font-size: 15px;
   margin: 0 auto;
 }
 
@@ -311,9 +311,13 @@ td {
 
 @media screen and (min-width: 990px) {
   .table__layout {
-    max-width: 90%;
+    width: 90%;
     margin: 0 auto;
     justify-content: center;
+  }
+
+  .table__layout h3 {
+    margin: 30px 0 5px 0;
   }
 }
 .video, .photo {
@@ -330,7 +334,7 @@ td {
 
 .video p, .photo p {
   font-size: 18px;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 
 .photo a {
@@ -342,7 +346,7 @@ td {
 .photo__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1px;
+  gap: 3px;
   grid-auto-flow: row dense;
 }
 
@@ -354,21 +358,30 @@ td {
   justify-items: center;
 }
 
+@media screen and (min-width: 600px) {
+  .photo__list a:nth-child(5n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .video iframe {
+    width: 560px;
+    height: 315px;
+  }
+}
 @media screen and (min-width: 990px) {
   .video__layout {
     display: flex;
     justify-content: space-around;
   }
 
+  .video {
+    margin: 0 10px;
+  }
+
   .photo__list a:nth-child(6n) {
     grid-column: span 2;
     grid-row: span 2;
-  }
-
-  .video iframe {
-    max-width: 560px;
-    max-height: 315px;
-    margin-bottom: 20px;
   }
 }
 /*width="560" height="315"*/
@@ -552,7 +565,6 @@ body {
 
 .hero__text h1 {
   font-size: 30px;
-  /*na větší obrazovku 57px*/
   margin: 25px 0;
   padding: 0;
   color: white;
@@ -561,8 +573,8 @@ body {
 
 .hero__text p {
   margin-bottom: 15px;
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 /*JEDNOTLIVÉ SEKCE HLAVNÍ STRÁNKY*/
@@ -624,11 +636,14 @@ body {
 }
 
 /* Novinky*/
-.news,
-.news--count {
+.news {
   display: flex;
   flex-direction: column;
   margin: 0;
+}
+
+.news--count {
+  display: none;
 }
 
 /*Sponzoři*/
@@ -660,23 +675,25 @@ body {
   text-align: center;
 }
 
-/*   MEDIA QUERY PRO MIN 990px   */
-@media screen and (min-width: 990px) {
+/*MEDIA QUERY PRO MIN 600px*/
+@media screen and (min-width: 600px) {
   .hero__text h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .hero__text p {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .box {
     display: flex;
+    margin: 0 10px;
   }
 
   .box__item {
-    flex: 1 1 calc( 100% / 3);
-    padding: 20px;
+    flex-basis: calc(100% / 3);
+    margin: 5px;
+    padding: 15px;
   }
 
   .gallery__photo {
@@ -686,10 +703,62 @@ body {
   .gallery__photo img {
     flex-basis: calc(100% / 3);
     overflow: hidden;
+    margin: 5px;
   }
 
-  #photo--middle {
-    margin: 0 30px;
+  .news {
+    display: none;
+  }
+
+  .news--count {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sponsors__foto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  .sponsors__foto img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .mapa iframe {
+    width: 100%;
+  }
+}
+/*   MEDIA QUERY PRO MIN 990px   */
+@media screen and (min-width: 990px) {
+  .hero__text h1 {
+    font-size: 50px;
+  }
+
+  .hero__text p {
+    font-size: 35px;
+  }
+
+  .box,
+.gallery__photo {
+    display: flex;
+  }
+
+  .box {
+    margin: 0;
+  }
+
+  .box__item,
+.gallery__photo img {
+    flex-basis: calc(100% / 3);
+    overflow: hidden;
+    margin: 0 5px;
+    justify-content: space-around;
   }
 
   .news {
@@ -713,14 +782,15 @@ body {
          column-gap: 10px;
   }
 
+  .contact__main {
+    display: flex;
+    justify-content: space-around;
+  }
+
   .contacts {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
-  }
-
-  .contact__main {
-    display: flex;
   }
 
   .contact__item {
@@ -736,6 +806,6 @@ body {
   }
 
   .mapa {
-    width: 100%;
+    margin: 0;
   }
 }
