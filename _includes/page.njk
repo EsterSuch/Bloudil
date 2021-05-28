@@ -32,32 +32,37 @@
   </head>
   <body>
     
-    <section class="sirka">
-      <div class="top">
-        <div class="logoM" id="nahoru">
-          <a href="/"><img src="/images/BB-logo-obr.png"></a>
-        </div>
-          <a href="/"><h2>MTBO závody</h2></a>
-      </div>
+ <section class="main__layout">
+      <section class="sirka">
 
-    <nav class="menu">
-      <ul class="menu__list">
-        <a href="/"><img id="domek" src="/images/domek-hranaty.png"></a>
-          <li class="menu__item {{'menu__item--active' if page.fileSlug === 'aktuality'}}">
-          <a class="menu__link" href="/aktuality/">Aktuality</a>
-          </li>
+       <div class="header__layout"> 
+         
+          <div class="top">
+            <div class="logoM" id="nahoru">
+              <a href="/"><img src="/images/BB-logo-obr.png"></a>
+            </div>
+              <a href="/"><h2>MTBO závody</h2></a>
+          </div>
 
-          <li class="menu__item {{'menu__item--active' if page.fileSlug === 'registrace'}}">
-          <a class="menu__link" href="/registrace/">Registrace</a>
-          </li>
+          <nav class="menu">
+          <ul class="menu__list">
+            <a href="/"><img id="domek" src="/images/domek-hranaty.png"></a>
+              <li class="menu__item {{'menu__item--active' if page.fileSlug === 'aktuality'}}">
+              <a class="menu__link" href="/aktuality/">Aktuality</a>
+              </li>
 
-          <div class="menu__mobil">
+              <li class="menu__item {{'menu__item--active' if page.fileSlug === 'registrace'}}">
+              <a class="menu__link" href="/registrace/">Registrace</a>
+              </li>
 
+              <div class="menu__mobil">
 
-            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-		          <label for="menu-checkbox" class="menu__toggler">Více</label>
-              
-              <div class="menu__mobil--hidden">
+ 
+                <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="menu__toggler">Více</label>
+      
+
+              <div class="menu__mobil--hidden">  
 
                 <li class="menu__item {{'menu__item--active' if page.fileSlug === 'startovka'}}">
                 <a class="menu__link" href="/startovka/">Startovní listina</a>
@@ -68,21 +73,32 @@
                 </li>
 
                 <li class="menu__item {{'menu__item--active' if page.fileSlug === 'fotovideo'}}">
-                <a class="menu__link" href="/fotovideo/">Foto & Video</a>
+                <a class="menu__link" href="/fotovideo/">Foto&nbsp;& video </a>
                 </li>                
 
                 <li class="menu__item {{'menu__item--active' if page.fileSlug === 'propozice'}}">
-                <a class="menu__link" href="/propozice/">Propozice</a>
+                <a class="menu__link" href="https://bukovskybloudil.netlify.app/">Propozice</a>
                 </li>
                 <li class="menu__item {{'menu__item--active' if page.fileSlug === 'kontakt'}}">
                 <a class="menu__link" href="/kontakt/">Kontakt</a>
                 </li>
               </div>
-          </div>
-       </ul>
-    </nav>
-    </section>
+            </div>
+          </ul>
+          </nav>
+        
+       </div>
     
+      <div class="hero__text">
+        <h1>Chceš překonat svoje limity?</h1>
+        <h1>Chceš zažít adrenalin?</h1>
+        <p>Tak se zaregistruj.</p>
+        <button class="button"><a href="/registrace/">REGISTRACE</a></button>
+      </div>
+
+
+    </section>
+ </section>
 <main>
 
 {{ content | safe }}

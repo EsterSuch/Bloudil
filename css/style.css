@@ -103,6 +103,70 @@ textarea {
   width: 30px;
 }
 
+.main__layout {
+  height: 700px;
+  background-image: url("/images/hero-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/*nadpis-obrázek a MTBO nad menu*/
+.top {
+  display: block;
+  margin: 0 auto;
+}
+
+.logoM {
+  display: block;
+  text-align: center;
+}
+
+.logoM img {
+  max-height: 60%;
+  max-width: 60%;
+  margin-top: 10px;
+}
+
+.top a {
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.top h2 {
+  font-size: 16px;
+  color: #10D817;
+  text-align: center;
+}
+
+/*  HERO SEKCE   */
+.hero__text {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);*/
+  color: #10D817;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero__text h1 {
+  font-size: 30px;
+  margin: 25px 0;
+  padding: 0;
+  color: white;
+  text-shadow: 0px 4px 20px #10D817;
+}
+
+.hero__text p {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -144,19 +208,28 @@ textarea {
   color: #10D817;
   text-align: left;
   font-size: 20px;
-  border: 1px solid #4a4a4f;
 }
 .menu__link:hover, .menu__toggler:hover {
   font-weight: 800;
-  border-bottom: 1px solid #10D817;
+  -webkit-text-decoration: underline #10D817;
+          text-decoration: underline #10D817;
+  text-underline-position: under;
 }
 
 .menu__item--active {
   font-weight: 800;
-  border-bottom: 1px solid #10D817;
+  -webkit-text-decoration: underline 1px solid #10D817;
+          text-decoration: underline 1px solid #10D817;
+  text-underline-position: under;
 }
 
 @media screen and (max-width: 799px) {
+  .header__layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .menu__checkbox:checked ~ .menu__mobil--hidden {
     display: flex;
     flex-direction: column;
@@ -164,6 +237,10 @@ textarea {
 
   .menu__mobil--hidden .menu__link, .menu__toggler {
     text-align: left;
+  }
+
+  .menu__mobil--hidden li {
+    text-align: center;
   }
 
   .box-mini {
@@ -181,6 +258,46 @@ textarea {
 
   .menu__mobil--hidden {
     display: flex;
+  }
+
+  .header__layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0 10xp;
+  }
+
+  .hero__text h1 {
+    font-size: 50px;
+  }
+
+  .hero__text p {
+    font-size: 40px;
+  }
+
+  .menu__link:hover, .menu__toggler:hover, .menu__item--active {
+    font-weight: 800;
+    border-bottom: none;
+    -webkit-text-decoration: underline 1px solid #10D817;
+            text-decoration: underline 1px solid #10D817;
+    text-underline-position: under;
+  }
+
+  .logoM img {
+    max-height: 80%;
+    max-width: 80%;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header__layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 footer {
@@ -511,70 +628,6 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 10px;
-}
-
-/*nadpis-obrázek a MTBO nad menu*/
-.top {
-  display: block;
-  margin: 0 auto;
-}
-
-.logoM {
-  display: block;
-  text-align: center;
-}
-
-.logoM img {
-  max-height: 60%;
-  max-width: 60%;
-  margin-top: 10px;
-}
-
-.top a {
-  text-decoration: none;
-  margin: 0 auto;
-}
-
-.top h2 {
-  font-size: 16px;
-  color: #10D817;
-  text-align: center;
-}
-
-/*  HERO SEKCE   */
-.hero {
-  background-image: url(/images/hero-bw.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 400px;
-}
-
-.hero__text {
-  text-align: center;
-  /* justify-content: center;*/
-  /*align-items: center;*/
-  /*top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
-  color: #10D817;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.hero__text h1 {
-  font-size: 30px;
-  margin: 25px 0;
-  padding: 0;
-  color: white;
-  text-shadow: 0px 4px 20px #10D817;
-}
-
-.hero__text p {
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: 800;
 }
 
 /*JEDNOTLIVÉ SEKCE HLAVNÍ STRÁNKY*/

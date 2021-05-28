@@ -1,5 +1,64 @@
 @use 'colors' as *;
 
+.main__layout {
+  height: 700px;
+  background-image: url('/images/hero-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+/*nadpis-obrázek a MTBO nad menu*/
+.top {
+  display: block;
+  margin: 0 auto;
+}
+.logoM{
+  display: block;
+  text-align: center;
+}
+.logoM img{
+  max-height: 60%;
+  max-width: 60%;
+  margin-top: 10px;
+}
+.top a{
+  text-decoration: none;
+  margin: 0 auto;
+}
+.top h2{
+  font-size: 16px;  
+  color: $letter-main;
+  text-align: center;
+}
+
+/*  HERO SEKCE   */
+ 
+.hero__text {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+ /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  color: $letter-main;
+  margin: 0 auto;
+  padding: 20px;
+}
+.hero__text h1{
+  font-size: 30px;  
+  margin: 25px 0;
+  padding: 0;
+  color: $letter-second;
+  text-shadow: 0px 4px 20px $letter-main;
+}
+.hero__text p{
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 800;
+}
 .menu{
   display: flex;
   flex-direction: column;
@@ -32,33 +91,45 @@
   display: flex;  
   margin-left: 20px;
 }
-.menu__link, .menu__toggler{
+.menu__link, .menu__toggler {
   text-decoration: none;
   list-style-type: none;
   display: block;
   color: $letter-main;
   text-align: left;
   font-size: 20px;
-  border: 1px solid $bgd-second;
+  
   
     &:hover {
       font-weight: 800;
-      border-bottom: 1px solid $letter-main;
+      text-decoration: underline $letter-main;
+      text-underline-position: under;
     }
 }
 
+
 .menu__item--active {
   font-weight: 800;
-      border-bottom: 1px solid $letter-main;
+  text-decoration: underline 1px solid $letter-main;
+  text-underline-position: under;
 }
 
+
 @media screen and (max-width: 799px) {
+  .header__layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .menu__checkbox:checked ~ .menu__mobil--hidden{
     display: flex;
     flex-direction: column;
   }
   .menu__mobil--hidden .menu__link, .menu__toggler{
     text-align: left;
+  }
+  .menu__mobil--hidden li {
+    text-align: center;
   }
   .box-mini{
     display: flex;
@@ -73,6 +144,42 @@
     display: none;
   }
   .menu__mobil--hidden{
-    display: flex
+    display: flex;
+    
   }
+  .header__layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .menu {
+    margin: 0;
+    padding: 0 10xp;
+  }
+
+  .hero__text h1{
+    font-size: 50px;  
+  }
+  .hero__text p{
+    font-size: 40px;
+  }
+  .menu__link:hover, .menu__toggler:hover, .menu__item--active {
+      font-weight: 800;
+      border-bottom: none;
+      text-decoration: underline 1px solid $letter-main;
+      text-underline-position: under;
+    }
+  .logoM img {
+    max-height: 80%;
+    max-width: 80%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+.header__layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 }

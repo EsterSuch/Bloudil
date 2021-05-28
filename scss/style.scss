@@ -29,63 +29,6 @@ body{
   padding: 10px;
 }
 
-/*nadpis-obrázek a MTBO nad menu*/
-.top {
-  display: block;
-  margin: 0 auto;
-}
-.logoM{
-  display: block;
-  text-align: center;
-}
-.logoM img{
-  max-height: 60%;
-  max-width: 60%;
-  margin-top: 10px;
-}
-.top a{
-  text-decoration: none;
-  margin: 0 auto;
-}
-.top h2{
-  font-size: 16px;  
-  color: $letter-main;
-  text-align: center;
-}
-
-/*  HERO SEKCE   */
-.hero{
-  background-image: url(/images/hero-bw.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 400px;
- }
- 
-.hero__text {
-  text-align: center;
- /* justify-content: center;*/
-  /*align-items: center;*/
-  /*top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
-  color: $letter-main;
-  margin: 0 auto;
-  padding: 20px;
-}
-.hero__text h1{
-  font-size: 30px;  
-  margin: 25px 0;
-  padding: 0;
-  color: $letter-second;
-  text-shadow: 0px 4px 20px $letter-main;
-}
-.hero__text p{
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: 800;
-}
 
 /*JEDNOTLIVÉ SEKCE HLAVNÍ STRÁNKY*/
 
