@@ -43,19 +43,23 @@
 
 /*CSS pro novinky na hlavní stránce*/
 .index__item h2 {
-  font-size: 16px;
+  font-size: 20px;
 }
 .index__item p {
-  font-size: 12px;
+  font-size: 16px;
 }
 .index__item a {
   text-decoration: none;
   color: $letter-main;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .index__item {
   margin-left: 10px;
+  text-align: center;
+}
+.empty__space {
+  min-height: 500px;
 }
 
 @media screen and (min-width: 990px){
