@@ -222,6 +222,10 @@ textarea {
           text-decoration: underline 1px solid #10D817;
   text-underline-position: under;
 }
+.menu__item--active:hover {
+  text-decoration: none;
+  text-underline-position: none;
+}
 
 @media screen and (max-width: 799px) {
   .header__layout {
