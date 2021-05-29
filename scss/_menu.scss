@@ -1,11 +1,16 @@
 @use 'colors' as *;
 
+/* rozložení hlavní stránky */
 .main__layout {
   min-height: 600px;
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%), url('/images/hero-bg.jpg') no-repeat center/cover; 
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 70%), url('/images/hero-bg.jpg') no-repeat center/cover; 
 }
+
+/* třída pro menu na dalších stránkách*/
 .page__layout {
   margin-bottom: 50px;
+  border-bottom: 1px solid $letter-main;
+  background-color: $bgd-main;
 }
 
 
@@ -34,31 +39,7 @@
   margin-top: 10px;
 }
 
-/*  HERO SEKCE   */
- 
-.hero__text {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
- /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
-  color: $letter-main;
-  margin: 0 auto;
-  padding: 20px;
-}
-.hero__text h1{
-  font-size: 30px;  
-  margin: 25px 0;
-  padding: 0;
-  color: $letter-second;
-  text-shadow: 0px 4px 20px $letter-main;
-}
-.hero__text p{
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: 800;
-}
+/* položky menu */
 
 .menu{
   display: flex;
@@ -81,6 +62,7 @@
   justify-content: space-around;
   padding: 0;
   margin: 20px 0;
+  align-items: baseline;
 }
 
 #domek{
@@ -88,25 +70,27 @@
   height: 20px;
 }
 
-.menu__item, .menu__toggler{
+.menu__item, 
+.menu__toggler{
   display: flex;  
   margin-left: 20px;
 }
-.menu__link, .menu__toggler {
+.menu__link, 
+.menu__toggler {
   text-decoration: none;
   list-style-type: none;
   display: block;
   color: $letter-main;
   text-align: left;
   font-size: 20px;
-    
+  margin-top: 3px;
+     
     &:hover {
       font-weight: 800;
       text-decoration: underline $letter-main;
       text-underline-position: under;
     }
 }
-
 
 .menu__item--active {
   font-weight: 800;
@@ -118,6 +102,37 @@
     }
 }
 
+/*  HERO SEKCE   */
+ 
+.hero__text {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: $letter-main;
+  margin: 40px auto;
+  padding: 20px;
+}
+.hero__text h1{
+  font-size: 30px;  
+  margin: 0 0 25px 0;
+  padding: 0;
+  color: $letter-second;
+  text-shadow: 0px 4px 20px $letter-main;
+}
+.hero__text p{
+  margin: 0 0 15px 0;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 600px) {
+  .hero__text h1 {
+    font-size: 40px;
+  }
+  .hero__text p{
+    font-size: 35px;
+  }
+}
 
 @media screen and (max-width: 799px) {
   .header__layout{
@@ -129,7 +144,8 @@
     display: flex;
     flex-direction: column;
   }
-  .menu__mobil--hidden .menu__link, .menu__toggler{
+  .menu__mobil--hidden .menu__link, 
+  .menu__toggler{
     text-align: left;
   }
   .menu__mobil--hidden li {
@@ -145,36 +161,35 @@
 
 @media screen and (min-width: 600px) and (max-width: 1000px){
   .logoM img{
-    /*max-height: 60%;*/
     max-width: 40%;
     margin-top: 10px;
   }
 }
 @media screen and (min-width: 800px){
-  .menu__toggler{
-    display: none;
-  }
-  .menu__mobil--hidden{
-    display: flex;
-    
-  }
   .header__layout{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+  .menu__toggler{
+    display: none;
+  }
+  .menu__mobil--hidden{
+    display: flex;
+  }
   .menu {
     margin: 0;
     padding: 0 10xp;
   }
-
   .hero__text h1{
     font-size: 50px;  
   }
   .hero__text p{
     font-size: 40px;
   }
-  .menu__link:hover, .menu__toggler:hover, .menu__item--active {
+  .menu__link:hover, 
+  .menu__toggler:hover, 
+  .menu__item--active {
       font-weight: 800;
       border-bottom: none;
       text-decoration: underline 1px solid $letter-main;

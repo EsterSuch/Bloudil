@@ -103,13 +103,17 @@ textarea {
   width: 30px;
 }
 
+/* rozložení hlavní stránky */
 .main__layout {
   min-height: 600px;
-  background: linear-gradient(black, rgba(0, 0, 0, 0) 50%), url("/images/hero-bg.jpg") no-repeat center/cover;
+  background: linear-gradient(black, rgba(0, 0, 0, 0) 70%), url("/images/hero-bg.jpg") no-repeat center/cover;
 }
 
+/* třída pro menu na dalších stránkách*/
 .page__layout {
   margin-bottom: 50px;
+  border-bottom: 1px solid #10D817;
+  background-color: #38383D;
 }
 
 /*nadpis-obrázek a MTBO nad menu*/
@@ -141,33 +145,7 @@ textarea {
   margin-top: 10px;
 }
 
-/*  HERO SEKCE   */
-.hero__text {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  /* top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);*/
-  color: #10D817;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.hero__text h1 {
-  font-size: 30px;
-  margin: 25px 0;
-  padding: 0;
-  color: white;
-  text-shadow: 0px 4px 20px #10D817;
-}
-
-.hero__text p {
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: 800;
-}
-
+/* položky menu */
 .menu {
   display: flex;
   flex-direction: column;
@@ -190,6 +168,7 @@ textarea {
   justify-content: space-around;
   padding: 0;
   margin: 20px 0;
+  align-items: baseline;
 }
 
 #domek {
@@ -197,20 +176,24 @@ textarea {
   height: 20px;
 }
 
-.menu__item, .menu__toggler {
+.menu__item,
+.menu__toggler {
   display: flex;
   margin-left: 20px;
 }
 
-.menu__link, .menu__toggler {
+.menu__link,
+.menu__toggler {
   text-decoration: none;
   list-style-type: none;
   display: block;
   color: #10D817;
   text-align: left;
   font-size: 20px;
+  margin-top: 3px;
 }
-.menu__link:hover, .menu__toggler:hover {
+.menu__link:hover,
+.menu__toggler:hover {
   font-weight: 800;
   -webkit-text-decoration: underline #10D817;
           text-decoration: underline #10D817;
@@ -228,6 +211,39 @@ textarea {
   text-underline-position: none;
 }
 
+/*  HERO SEKCE   */
+.hero__text {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #10D817;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.hero__text h1 {
+  font-size: 30px;
+  margin: 0 0 25px 0;
+  padding: 0;
+  color: white;
+  text-shadow: 0px 4px 20px #10D817;
+}
+
+.hero__text p {
+  margin: 0 0 15px 0;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 600px) {
+  .hero__text h1 {
+    font-size: 40px;
+  }
+
+  .hero__text p {
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 799px) {
   .header__layout {
     display: flex;
@@ -240,7 +256,8 @@ textarea {
     flex-direction: column;
   }
 
-  .menu__mobil--hidden .menu__link, .menu__toggler {
+  .menu__mobil--hidden .menu__link,
+.menu__toggler {
     text-align: left;
   }
 
@@ -258,24 +275,23 @@ textarea {
 }
 @media screen and (min-width: 600px) and (max-width: 1000px) {
   .logoM img {
-    /*max-height: 60%;*/
     max-width: 40%;
     margin-top: 10px;
   }
 }
 @media screen and (min-width: 800px) {
+  .header__layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .menu__toggler {
     display: none;
   }
 
   .menu__mobil--hidden {
     display: flex;
-  }
-
-  .header__layout {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 
   .menu {
@@ -291,7 +307,9 @@ textarea {
     font-size: 40px;
   }
 
-  .menu__link:hover, .menu__toggler:hover, .menu__item--active {
+  .menu__link:hover,
+.menu__toggler:hover,
+.menu__item--active {
     font-weight: 800;
     border-bottom: none;
     -webkit-text-decoration: underline 1px solid #10D817;
@@ -346,12 +364,14 @@ footer p {
   list-style-type: none;
   display: flex;
   color: #10D817;
+  font-size: 20px;
 }
 
 .instruction p {
   padding: 0;
-  margin: 0 0 0 3px;
+  margin: 0 0 0 10px;
   color: white;
+  font-size: 20px;
 }
 
 .instruction a {
@@ -369,14 +389,14 @@ footer p {
 }
 
 .instruction__item h3 {
-  font-size: 16px;
+  font-size: 20px;
   margin: 0;
 }
 
 .instruction__item p, li {
   color: white;
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .instruction__item a {
@@ -417,7 +437,12 @@ table {
   border: 1px solid #10D817;
 }
 
-th, td {
+.table__layout h2 {
+  margin: 0 0 20px 0;
+}
+
+th,
+td {
   text-align: center;
   border: 1px solid #10D817;
   padding: 3px;
@@ -449,19 +474,25 @@ td {
     margin: 30px 0 5px 0;
   }
 }
-.video, .photo {
+.video,
+.photo {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
+.photo__layout {
+  margin: 0 30px;
+}
+
 .video iframe {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   margin-bottom: 20px;
 }
 
-.video p, .photo p {
+.video p,
+.photo p {
   font-size: 18px;
   margin: 0 0 10px 0;
 }
@@ -491,6 +522,10 @@ td {
   .photo__list a:nth-child(5n) {
     grid-column: span 2;
     grid-row: span 2;
+  }
+
+  .video {
+    align-items: center;
   }
 
   .video iframe {
@@ -547,6 +582,10 @@ td {
 
 .news__list img {
   max-width: 100%;
+}
+
+.news__item p {
+  margin: 0 0 15px 0;
 }
 
 .article {
@@ -644,7 +683,7 @@ body {
 .sirka {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
 }
 
 /*JEDNOTLIVÉ SEKCE HLAVNÍ STRÁNKY*/
@@ -658,7 +697,7 @@ body {
 .box__item {
   background-color: white;
   padding: 10px;
-  margin: 15px;
+  margin: 15px 0;
   justify-content: space-between;
 }
 
@@ -687,7 +726,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px;
 }
 
 .gallery__photo {
@@ -738,6 +776,10 @@ body {
   font-size: 20px;
 }
 
+.sponsors p {
+  margin: 0 0 15px 0;
+}
+
 /*Oblast s mapou a kontakty*/
 .mapa {
   background-color: #4a4a4f;
@@ -748,14 +790,6 @@ body {
 
 /*MEDIA QUERY PRO MIN 600px*/
 @media screen and (min-width: 600px) {
-  .hero__text h1 {
-    font-size: 40px;
-  }
-
-  .hero__text p {
-    font-size: 35px;
-  }
-
   .box {
     display: flex;
     margin: 0 10px;
@@ -799,8 +833,7 @@ body {
        object-fit: cover;
     justify-items: center;
   }
-}
-@media screen and (min-width: 600px) {
+
   .mapa iframe {
     width: 100%;
   }

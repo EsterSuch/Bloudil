@@ -7,7 +7,9 @@
 .news__list img{
   max-width: 100%;
 }
-
+.news__item p {
+  margin: 0 0 15px 0;
+}
 .article {
   padding: 0 20px;
 }
@@ -74,5 +76,4 @@
   .news__item {
     margin-left: 30px;
   }
-
 }

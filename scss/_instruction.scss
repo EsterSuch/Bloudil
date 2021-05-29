@@ -9,12 +9,14 @@
   list-style-type: none;
   display: flex;
   color: $letter-main;
+  font-size: 20px;
 }
 
 .instruction p{
   padding: 0;
-  margin: 0 0 0 3px;
+  margin: 0 0 0 10px;
   color: $letter-second;
+  font-size: 20px;
 }
 
 .instruction a {
@@ -30,13 +32,13 @@
   margin-bottom: 15px;
 }
 .instruction__item h3{
-  font-size: 16px;
+  font-size: 20px;
   margin: 0;
 }
 .instruction__item p, li{
   color: $letter-second;
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
 }
 .instruction__item a{
   text-decoration: none;
