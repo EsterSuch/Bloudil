@@ -3,18 +3,22 @@
 /*CSS PROPOZICE*/
 
 .instruction ul{
-  padding: 15px;
+  padding: 15px; 
 }
+
 .instruction li{
   list-style-type: none;
   display: flex;
+  flex-direction: column;
   color: $letter-main;
   font-size: 20px;
+  margin-top: 5px;
 }
+
 
 .instruction p{
   padding: 0;
-  margin: 0 0 0 10px;
+  margin: 0;
   color: $letter-second;
   font-size: 20px;
 }
@@ -61,4 +65,14 @@
 #penalizace li {
   color: $letter-second;
   margin-top: 5px;
+}
+
+@media screen and (min-width: 450px) {
+  .instruction li{
+    display: flex;
+    flex-direction: row;
+  }
+  .instruction p{
+    margin-left: 5px;
+  }
 }

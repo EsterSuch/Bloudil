@@ -49,7 +49,7 @@ title: BB úvod
 
 <section class="news sirka">
     
-    {% for novinky in collections.aktuality | limit(2) %}
+    {% for novinky in collections.aktuality | reverse | limit(2) %}
       <div class="index__news">
         <div class="index__item">
           <h2><a href="{{ novinky.url }}">{{ novinky.data.title }}</a></h2>
@@ -62,7 +62,7 @@ title: BB úvod
 
 <section class="news--count sirka">
     
-  {% for novinky in collections.aktuality | limit(3) %}
+  {% for novinky in collections.aktuality | reverse | limit(3) %}
     <div class="index__news">
       <div class="index__item">
         <h2><a href="{{ novinky.url }}">{{ novinky.data.title }}</a></h2>

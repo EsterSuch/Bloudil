@@ -59,8 +59,8 @@
 
 .menu__list{
   display: flex;
-  justify-content: space-around;
-  padding: 0;
+  justify-content: center;
+  padding: 0 10px;
   margin: 20px 0;
   align-items: baseline;
 }
@@ -73,13 +73,13 @@
 .menu__item, 
 .menu__toggler{
   display: flex;  
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .menu__link, 
 .menu__toggler {
   text-decoration: none;
   list-style-type: none;
-  display: block;
+  display: inline-block;
   color: $letter-main;
   text-align: left;
   font-size: 20px;
