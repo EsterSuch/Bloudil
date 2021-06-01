@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*FORMULÁŘ REGISTRACE + KONTAKT*/
+/*FORMULÁŘ REGISTRACE*/
 .form {
   width: 100%;
   max-width: 450px;
@@ -586,6 +586,11 @@ td {
   width: 8%;
   height: 8%;
   margin-right: 10px;
+}
+
+.contact__confirm {
+  display: flex;
+  justify-content: center;
 }
 
 .news__list {
