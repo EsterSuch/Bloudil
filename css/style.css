@@ -609,6 +609,7 @@ td {
 
 .contact__confirm p {
   color: white;
+  margin: 0 10px;
 }
 
 .mapa {
@@ -686,7 +687,7 @@ td {
 }
 
 .index__item p {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .index__item a {
