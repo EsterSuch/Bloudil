@@ -14,7 +14,7 @@ title: BB úvod
       <p>Sbalíš si kolo, oblíbený cyklistický obleček, nějaké jídlo co rád/a jíš během sportu (tyčinka, banán, řízek ....).</p>
   </div>
 
-  <div class="box__item">
+  <div class="box__item middle">
     <div class="box__item--mini">
       <img id="kolo" src="/images/kolo.png" alt="kolo">
       <h3>Během závodu</h3>
@@ -35,9 +35,9 @@ title: BB úvod
 <section class="gallery">
   <div class="sirka">
     <div class="gallery__photo">
-      <img src="/images/images-small/image001.jpg" alt="BB1">
-      <img src="/images/images-small/image036.jpg" alt="BB36">
-      <img src="/images/images-small/image047.jpg" alt="dobrota">
+      <div class="gallery__img"><img src="/images/images-small/image001.jpg" alt="BB-skupina"></div>
+      <div class="gallery__img"><img src="/images/images-small/image019.jpg" alt="BB-start"></div>
+      <div class="gallery__img"><img src="/images/images-small/image047.jpg" alt="BB-dobrota"></div>
     </div>
 
     <p class="gallery__text">Pokud tě zajímá, jak to při takovém závodě doopravdy vypadá, koukni na další fotky a video z loňského nultého ročníku.</p>
@@ -45,10 +45,15 @@ title: BB úvod
     <button class="button"><a href="/fotovideo/">Další fotky</a></button>
 
   </div>
+   
 </section>
 
-<section class="news sirka">
-    
+<section class="news__section sirka">
+  <div>
+    <h2>A tady máte nějaké novinky</h2>
+  </div>
+  
+  <div class="news">
     {% for novinky in collections.aktuality | reverse | limit(2) %}
       <div class="index__news">
         <div class="index__item">
@@ -58,6 +63,7 @@ title: BB úvod
         </div>
       </div>
     {% endfor %}
+  </div>
 </section>
 
 <section class="news--count sirka">
@@ -90,7 +96,7 @@ title: BB úvod
 </section>
 
 <section class="contact__main sirka">
-    <div class="mapa">
+    <div class="mapa__main">
       <iframe style="border:none" src="https://frame.mapy.cz/s/hobolovodo" width= "100%" height="100%" frameborder="0"></iframe>
     </div>
 

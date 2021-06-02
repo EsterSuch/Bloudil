@@ -3,9 +3,10 @@
 .form {
   width: 100%;
   max-width: 450px;
-  margin: 0 auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 0 10px;
+  margin: 0 auto;
 }
 
 .form-title h2 {
@@ -103,6 +104,11 @@ textarea {
   width: 30px;
 }
 
+@media screen and (min-width: 700px) {
+  .form {
+    margin: 0 80px;
+  }
+}
 /* rozložení hlavní stránky */
 .main__layout {
   min-height: 600px;
@@ -125,12 +131,12 @@ textarea {
 .logoM {
   display: block;
   text-align: center;
+  margin: 10px 20px;
 }
 
 .logoM img {
-  max-height: 60%;
-  max-width: 60%;
-  margin-top: 10px;
+  height: auto;
+  width: 100%;
 }
 
 .top a {
@@ -563,10 +569,16 @@ td {
 }
 /*width="560" height="315"*/
 /*KONTAKTY*/
+.contact__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .contacts {
-  display: block;
-  text-align: center;
-  margin: 35px 0 25px 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
 }
 
 .contacts p,
@@ -583,23 +595,44 @@ td {
 }
 
 .contact__item img {
-  width: 8%;
-  height: 8%;
-  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
 }
 
 .contact__confirm {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
+.mapa {
+  margin: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .contact__layout {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .contact__item {
+    justify-content: left;
+  }
+
+  .contact__main {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .news__list {
   display: flex;
   flex-direction: column;
 }
 
 .news__list img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .news__item p {
@@ -620,7 +653,8 @@ td {
 
 .article__img {
   justify-content: center;
-  max-width: 100%;
+  width: 50%;
+  height: auto;
 }
 
 .article__content {
@@ -657,7 +691,6 @@ td {
 }
 
 .index__item {
-  margin-left: 10px;
   text-align: center;
 }
 
@@ -715,8 +748,11 @@ body {
 .box__item {
   background-color: white;
   padding: 10px;
-  margin: 15px 0;
   justify-content: space-between;
+}
+
+.middle {
+  margin: 15px 0;
 }
 
 .box__item--mini {
@@ -744,16 +780,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .gallery__photo {
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
 }
 
-.gallery__photo img {
+.gallery__img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.gallery__img img {
+  width: 100%;
+  height: auto;
+  margin: 0;
 }
 
 .gallery__text {
@@ -762,6 +808,15 @@ body {
 }
 
 /* Novinky*/
+.news__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.news__section h2 {
+  text-align: center;
+}
+
 .news {
   display: flex;
   flex-direction: column;
@@ -810,23 +865,25 @@ body {
 @media screen and (min-width: 600px) {
   .box {
     display: flex;
-    margin: 0 10px;
+    margin: 0;
+    padding: 0;
   }
 
   .box__item {
     flex-basis: calc(100% / 3);
-    margin: 5px;
-    padding: 15px;
+    margin: 0 5px;
+    padding: 10px;
   }
 
   .gallery__photo {
-    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
   }
 
-  .gallery__photo img {
-    flex-basis: calc(100% / 3);
-    overflow: hidden;
-    margin: 5px;
+  .gallery__img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 5px;
   }
 
   .news {
@@ -874,8 +931,7 @@ body {
     margin: 0;
   }
 
-  .box__item,
-.gallery__photo img {
+  .box__item {
     flex-basis: calc(100% / 3);
     overflow: hidden;
     margin: 0 5px;
@@ -901,32 +957,5 @@ body {
     grid-template-columns: repeat(4, 1fr);
     -moz-column-gap: 10px;
          column-gap: 10px;
-  }
-
-  .contact__main {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-  }
-
-  .contact__item {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-  }
-
-  .contact__item img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-  }
-
-  .mapa {
-    margin: 0;
   }
 }

@@ -5,9 +5,10 @@
 .form {
   width: 100%;
   max-width: 450px;
-  margin: 0 auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 0 10px;
+  margin: 0 auto;
 }
 
 .form-title h2{
@@ -101,5 +102,12 @@ textarea{
 .sipka img {
   background-color: $letter-main;
   width: 30px;
+}
+
+@media screen and (min-width: 700px){
+  .form {
+    margin: 0 80px;
+
+  }
 }
 

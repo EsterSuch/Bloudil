@@ -1,6 +1,6 @@
 ---
 layout: news.njk
-title: Registrace jsou tu :-)
+title: Registrace jsou tu
 date: 2021-04-30T00:00:63
 foto: /images-small/image001.jpg
 alt: první malá fotka
