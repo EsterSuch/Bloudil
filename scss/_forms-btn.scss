@@ -63,6 +63,10 @@ textarea{
   border-bottom: 3px solid $letter-main;
 }
 
+.registr {
+  margin: 0 auto;
+}
+
 .button {
   background-color: $letter-main;
   color: $letter-second;
@@ -107,7 +111,9 @@ textarea{
 @media screen and (min-width: 700px){
   .form {
     margin: 0 80px;
-
+  }
+  .registr {
+    margin: 0 auto;
   }
 }
 

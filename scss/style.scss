@@ -29,6 +29,10 @@ body{
   padding: 15px;
 }
 
+.bgd-mainPage{
+  background-color: $letter-second;
+}
+
 
 /*JEDNOTLIVÉ SEKCE HLAVNÍ STRÁNKY*/
 
@@ -36,30 +40,62 @@ body{
 .box{
   display: block;
   padding: 20px 0;
-  justify-content: center;  
+  justify-content: center;
 }
+
 .box__item{
+  display: flex;
+  flex-direction: column;
   background-color: $letter-second;
   padding: 10px;
-  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
 }
+
 .middle {
-  margin: 15px 0;
+  margin: 0;
+  border-top: 1px solid $letter-main;
 }
+
 .box__item--mini{
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
-.box__item--mini h3{
-  margin-left: 10px;
+
+.box__item h3 {
+  color: $bgd-main;
 }
 .box__item p{
   margin: 0;
   margin-top: 15px;
+  color: $bgd-main;
 }
 #auto, #kolo, #finish{
-  max-height: 20%;
-  max-width: 20%;
+  height: 50px;
+  width: 50px;
+}
+
+/* Novinky*/
+
+.news__section{
+  display: flex;
+  flex-direction: column;
+}
+
+.news__section h2 {
+  text-align: center;
+  color: $bgd-main;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.news--count {
+  display: none;
 }
 
 /*fotky na hlavní stránce*/
@@ -77,45 +113,19 @@ body{
   flex-direction: column;
   align-items: center;
   padding: 0;
-}
-.gallery__img {
-  max-width: 100%;
-  max-height: 100%;
+  margin-bottom: 10px;
 }
 
 .gallery__img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0;
 }
-.gallery__text {
-  text-align: center;
-  padding: 5px;
-}
 
-/* Novinky*/
-
-.news__section{
-  display: flex;
-  flex-direction: column;
-}
-
-.news__section h2 {
-  text-align: center;
-}
-
-.news {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-.news--count {
-  display: none;
-}
 
 /*Sponzoři*/
 .sponsors{
-  background-color: $bgd-main;
+  background-color: $bgd-section;
   padding: 15px 0;
 }
 .sponsors__foto{
@@ -135,22 +145,24 @@ body{
 
 .sponsors p{
   margin: 0 0 15px 0;
+  color: $bgd-main;
 }
 
 /*Oblast s mapou a kontakty*/
 
 .mapa{
-  background-color: $bgd-second;
+  background-color: $bgd-section;
   padding: 15px;
   margin: 0 auto;
   text-align: center;
 }
 
-/*MEDIA QUERY PRO MIN 600px*/
+/*MEDIA QUERY PRO MIN 550px*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 550px) {
   .box {
     display: flex;
+    flex-direction: row;
     margin: 0; 
     padding: 0;
   }
@@ -160,16 +172,19 @@ body{
     margin: 0 5px;
     padding: 10px;
   }
- 
-  .gallery__photo {
-    flex-direction: row;
-    flex: 1 0 auto;
+  .middle {
+    border-top: none;
+    border-left: 1px solid $letter-main;
   }
-  
+
+  .gallery__photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
   .gallery__img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 5px;
+    width: 100%;
+    height: 100%;
   }
 
   .news {
@@ -206,7 +221,7 @@ body{
     font-size: 35px;
   }
   
-  .box, .gallery__photo{
+  .box {
     display: flex;
   }
   .box {
@@ -235,5 +250,11 @@ body{
     grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
   }
+  .gallery__photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
 }
 

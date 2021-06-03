@@ -13,16 +13,16 @@
   background-color: $bgd-main;
 }
 
-
 /*nadpis-obrázek a MTBO nad menu*/
 .top {
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 .logoM{
   display: block;
   text-align: center;
-  margin: 10px 20px;
+  margin: 10px;
 }
 .logoM img{
   height: auto;
@@ -32,7 +32,7 @@
   text-decoration: none;
   margin: 0 auto;
 }
-.top h2{
+.top p{
   font-size: 16px;  
   color: $letter-main;
   text-align: center;
@@ -63,11 +63,6 @@
   padding: 0 10px;
   margin: 20px 0;
   align-items: baseline;
-}
-
-#domek{
-  width: 20px;
-  height: 20px;
 }
 
 .menu__item, 

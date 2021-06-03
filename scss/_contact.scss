@@ -4,6 +4,12 @@
 
 /*KONTAKTY*/
 
+.contact__main {
+  background-color: $bgd-section;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px;
+}
 .contact__contact{
   display: flex;
   flex-direction: column;

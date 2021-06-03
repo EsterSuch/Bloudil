@@ -3,54 +3,41 @@ layout: page-main.njk
 title: BB úvod
 ---
 
+<div class="bgd-mainPage">
+
 <section class="sirka">
   <div class="box">
     
   <div class="box__item">
     <div class="box__item--mini">
-      <img id="auto" src="/images/auto.png" alt="auto">
-      <h3>Před závodem</h3>
+      <img id="auto" src="/images/car-new.png" alt="auto">
+      <h3>Před</h3>
     </div>
       <p>Sbalíš si kolo, oblíbený cyklistický obleček, nějaké jídlo co rád/a jíš během sportu (tyčinka, banán, řízek ....).</p>
   </div>
 
   <div class="box__item middle">
     <div class="box__item--mini">
-      <img id="kolo" src="/images/kolo.png" alt="kolo">
-      <h3>Během závodu</h3>
+      <img id="kolo" src="/images/bike.png" alt="kolo">
+      <h3>Během</h3>
     </div>
       <p>Pár vteřin po startu dostaneš mapu se zakreslenými body a jejich ohodnocení, nápovědu a kartičku s body. Kolik bodů nasbíráš a jak se k nim dostaneš je už na tobě.</p>
   </div>
 
-  <div class="box__item">
+  <div class="box__item middle">
     <div class="box__item--mini">
       <img id="finish" src="/images/finish.png" alt="finish">
-      <h3>Po závodě</h3>
+      <h3>Po</h3>
     </div>
       <p>Až projedeš cílem, tak tě čeká občerstvení, posezení s kamarády, koupání, medailový ceremoniál a možná i nějaký ten kulturní zážitek.</p>
   </div>
 </div>
 </section>
 
-<section class="gallery">
-  <div class="sirka">
-    <div class="gallery__photo">
-      <div class="gallery__img"><img src="/images/images-small/image001.jpg" alt="BB-skupina"></div>
-      <div class="gallery__img"><img src="/images/images-small/image019.jpg" alt="BB-start"></div>
-      <div class="gallery__img"><img src="/images/images-small/image047.jpg" alt="BB-dobrota"></div>
-    </div>
-
-    <p class="gallery__text">Pokud tě zajímá, jak to při takovém závodě doopravdy vypadá, koukni na další fotky a video z loňského nultého ročníku.</p>
-
-    <button class="button"><a href="/fotovideo/">Další fotky</a></button>
-
-  </div>
-   
-</section>
 
 <section class="news__section sirka">
   <div>
-    <h2>A tady máte nějaké novinky</h2>
+    <h2>AKTUALITY</h2>
   </div>
   
   <div class="news">
@@ -79,6 +66,26 @@ title: BB úvod
   {% endfor %}
 </section>
 
+<section class="gallery">
+  <div class="sirka">
+    <div class="gallery__photo">
+      <div class="gallery__img"><img src="/images/images-small/image001.jpg" alt="BB-skupina"></div>
+      <div class="gallery__img"><img src="/images/images-small/image004.jpg" alt="BB-start"></div>
+      <div class="gallery__img"><img src="/images/images-small/image009.jpg" alt="BB-dobrota"></div>
+      <div class="gallery__img"><img src="/images/images-small/image024.jpg" alt="BB-dobrota"></div>
+      <div class="gallery__img"><img src="/images/images-small/image025.jpg" alt="BB-dobrota"></div>
+      <div class="gallery__img"><img src="/images/images-small/image036.jpg" alt="BB-dobrota"></div>
+      <div class="gallery__img"><img src="/images/images-small/image045.jpg" alt="BB-dobrota"></div>
+      <div class="gallery__img"><img src="/images/images-small/image047.jpg" alt="BB-dobrota"></div>
+      <div class="gallery__img"><img src="/images/images-small/image050.jpg" alt="BB-dobrota"></div>
+    </div>
+
+    <button class="button"><a href="/fotovideo/">Další fotky</a></button>
+
+  </div>
+   
+</section>
+
 <section class="sponsors">
   <div class="sirka">
     <h3>Naši sponzoři a dobrovolníci</h3>
@@ -88,14 +95,14 @@ title: BB úvod
     <a href="http://www.sklenarstvi-pech.cz/" target="_blank"><img src="/images/Sklenarstvi_Pech.png" alt="Sklenarstvi_Pech"></a>
     <a href="http://www.truhlarstvi-bukova.cz/" target="_blank"><img src="/images/truhlar.png" alt="truhlar"></a>
     </div>
-    <p><span style="color: white">mami</span> – uvařila skvělý guláš, napekla dokonalé vdolky, buchty a další dobroty</p>
-    <p><span style="color: white">Běla, její dcera Běla a její dcera Johanka</span> – pomoc při registraci, focení a krmení našich hladových závodníků</p>
-    <p><span style="color: white">obec Buková</span> – poskytnutí zázemí u rybníku Brůdek</p>
-    <p><span style="color: white">Karel, Petr, Martin, Jitka a Jituška</span> - pomoc při přípravě areálu a svážení lampionků po závodě</p>
+    <p><span style="font-weight: bold">mami</span> – uvařila skvělý guláš, napekla dokonalé vdolky, buchty a další dobroty</p>
+    <p><span style="font-weight: bold">Běla, její dcera Běla a její dcera Johanka</span> – pomoc při registraci, focení a krmení našich hladových závodníků</p>
+    <p><span style="font-weight: bold">obec Buková</span> – poskytnutí zázemí u rybníku Brůdek</p>
+    <p><span style="font-weight: bold">Karel, Petr, Martin, Jitka a Jituška</span> - pomoc při přípravě areálu a svážení lampionků po závodě</p>
   </div>
 </section>
 
-<section class="contact__main sirka">
+<section class="contact__main">
     <div class="mapa__main">
       <iframe style="border:none" src="https://frame.mapy.cz/s/hobolovodo" width= "100%" height="100%" frameborder="0"></iframe>
     </div>
@@ -118,3 +125,5 @@ title: BB úvod
   </div>
 
 </section>
+
+</div>
