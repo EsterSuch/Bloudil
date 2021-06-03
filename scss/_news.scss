@@ -62,6 +62,9 @@
   font-size: 12px;
   color: $letter-main;
 }
+.index__item {
+  text-align: center;
+}
 .index__item a {
   text-decoration: none;
   color: $bgd-main;
@@ -78,10 +81,12 @@
 .empty__space {
   min-height: 500px;
 }
-
-@media screen and (min-width: 550px) {
-
+.news--count{
+  margin: 0;
 }
+
+
+
 @media screen and (min-width: 990px){
   .news__list {
     display: grid;
@@ -93,5 +98,18 @@
   }
   .news__item {
     margin-left: 30px;
+  }
+  .index__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .index__item h2 {
+    margin: 0;
+  }
+  .news__section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
   }
 }

@@ -82,11 +82,14 @@ body{
 .news__section{
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .news__section h2 {
   text-align: center;
   color: $bgd-main;
+  margin: 0;
 }
 
 .news {
@@ -192,7 +195,13 @@ body{
   }
   .news--count {
     display: flex;
+    justify-content: center;
+  }
+
+  .news--count {
     justify-content: space-around;
+    flex-direction: row;
+    margin: 0 auto;
   }
   .sponsors__foto {
     display: grid;
@@ -223,8 +232,6 @@ body{
   
   .box {
     display: flex;
-  }
-  .box {
     margin: 0;
   }
   .box__item {
@@ -241,6 +248,10 @@ body{
     justify-content: space-around;
     flex-direction: row;
     margin: 0 auto;
+  }
+  
+  .news--count h2{
+    text-align: center;
   }
   .news--count a{
     font-size: 20px;

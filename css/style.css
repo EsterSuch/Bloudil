@@ -575,7 +575,6 @@ td {
 /*KONTAKTY*/
 .contact__main {
   background-color: lightgrey;
-  max-width: 1100px;
   margin: 0 auto;
   padding: 15px;
 }
@@ -623,7 +622,10 @@ td {
   margin: 0 10px;
 }
 
-.mapa {
+.mapa--contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   margin: 0;
 }
 
@@ -715,6 +717,10 @@ td {
   color: #10D817;
 }
 
+.index__item {
+  text-align: center;
+}
+
 .index__item a {
   text-decoration: none;
   color: #38383D;
@@ -735,6 +741,10 @@ td {
   min-height: 500px;
 }
 
+.news--count {
+  margin: 0;
+}
+
 @media screen and (min-width: 990px) {
   .news__list {
     display: grid;
@@ -748,6 +758,22 @@ td {
 
   .news__item {
     margin-left: 30px;
+  }
+
+  .index__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .index__item h2 {
+    margin: 0;
+  }
+
+  .news__section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
   }
 }
 html {
@@ -826,11 +852,14 @@ body {
 .news__section {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .news__section h2 {
   text-align: center;
   color: #38383D;
+  margin: 0;
 }
 
 .news {
@@ -939,7 +968,13 @@ body {
 
   .news--count {
     display: flex;
+    justify-content: center;
+  }
+
+  .news--count {
     justify-content: space-around;
+    flex-direction: row;
+    margin: 0 auto;
   }
 
   .sponsors__foto {
@@ -972,9 +1007,6 @@ body {
 
   .box {
     display: flex;
-  }
-
-  .box {
     margin: 0;
   }
 
@@ -993,6 +1025,10 @@ body {
     justify-content: space-around;
     flex-direction: row;
     margin: 0 auto;
+  }
+
+  .news--count h2 {
+    text-align: center;
   }
 
   .news--count a {

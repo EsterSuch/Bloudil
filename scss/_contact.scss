@@ -6,7 +6,7 @@
 
 .contact__main {
   background-color: $bgd-section;
-  max-width: 1100px;
+
   margin: 0 auto;
   padding: 15px;
 }
@@ -50,7 +50,10 @@
   margin: 0 10px;
 }
 
-.mapa {
+.mapa--contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   margin: 0;
 }
 
