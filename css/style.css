@@ -574,7 +574,7 @@ td {
 /*width="560" height="315"*/
 /*KONTAKTY*/
 .contact__main {
-  background-color: lightgrey;
+  background-color: white;
   margin: 0 auto;
   padding: 15px;
 }
@@ -595,16 +595,24 @@ td {
 .contacts a {
   font-size: 18px;
   text-decoration: none;
+  color: #38383D;
+  margin-left: 5px;
+}
+
+.contact__item--green p,
+.contact__item--green a {
   color: #10D817;
 }
 
-.contact__item {
+.contact__item,
+.contact__item--green {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.contact__item img {
+.contact__item img,
+.contact__item--green img {
   width: 50px;
   height: 50px;
   margin-bottom: 15px;
@@ -635,11 +643,13 @@ td {
     justify-content: space-around;
   }
 
-  .contact__item {
+  .contact__item,
+.contact__item--green {
     justify-content: left;
   }
 
   .contact__main {
+    max-width: 1100px;
     display: flex;
     justify-content: space-around;
   }
@@ -669,6 +679,10 @@ td {
 
 .article {
   padding: 0 20px;
+}
+
+.news__title--main {
+  margin: 40px auto 20px auto;
 }
 
 .article__text a {
@@ -898,13 +912,14 @@ body {
 
 /*Sponzoři*/
 .sponsors {
-  background-color: lightgrey;
+  background-color: white;
   padding: 15px 0;
 }
 
 .sponsors__foto {
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
   padding: 10px 0;
 }
 
@@ -913,9 +928,18 @@ body {
   max-width: 100%;
 }
 
+.border {
+  border: 1px solid #38383D;
+}
+
+.sponsors__foto a {
+  margin-bottom: 10px;
+}
+
 .sponsors h3 {
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
+  color: #38383D;
 }
 
 .sponsors p {
@@ -925,7 +949,7 @@ body {
 
 /*Oblast s mapou a kontakty*/
 .mapa {
-  background-color: lightgrey;
+  background-color: white;
   padding: 15px;
   margin: 0 auto;
   text-align: center;
@@ -1011,10 +1035,11 @@ body {
   }
 
   .box__item {
+    display: flex;
     flex-basis: calc(100% / 3);
     overflow: hidden;
     margin: 0 5px;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 
   .news {

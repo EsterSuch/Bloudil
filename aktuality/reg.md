@@ -9,7 +9,7 @@ tags: aktuality
 
 Dnes jsme spustili registraci na závod. Registrace probíhají přes registrační formulář (odkaz zde: <a href="/registrace/">registrace</a>). 
 
-Pokud by Vám cokoliv nešlo, nebo jste měli technické problémy, napište nám na e-mail <a>bukovskybloudil@gmail.com</a> a vše poladíme. Budeme rádi za šíření info o závodě mezi Vaše známé. Těšíme se na Vás v srpnu v Bukové.
+Pokud by Vám cokoliv nešlo, nebo jste měli technické problémy, napište nám na e-mail <a>bukovsky.bloudil@gmail.com</a> a vše poladíme. Budeme rádi za šíření info o závodě mezi Vaše známé. Těšíme se na Vás v srpnu v Bukové.
 
 <h4>Tým BB</h4>
 
