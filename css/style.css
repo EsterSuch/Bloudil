@@ -68,7 +68,8 @@ textarea {
   margin: 0 auto;
 }
 
-.button {
+.button,
+.button--bigger {
   background-color: #10D817;
   color: white;
   border: 2px solid #10D817;
@@ -79,22 +80,20 @@ textarea {
   font-size: 16px;
   margin-bottom: 15px;
 }
-.button a {
+.button a,
+.button--bigger a {
   text-decoration: none;
   color: white;
 }
-.button:hover {
+.button:hover,
+.button--bigger:hover {
   background-color: transparent;
   color: #10D817;
   cursor: pointer;
 }
-.button:hover a {
+.button:hover a,
+.button--bigger:hover a {
   color: #10D817;
-}
-
-.newsB {
-  display: flex;
-  margin: 0;
 }
 
 .sipka {
@@ -115,6 +114,19 @@ textarea {
 
   .registr {
     margin: 0 auto;
+  }
+
+  .button--bigger {
+    margin-top: 50px;
+    padding: 15px 20px;
+  }
+  .button--bigger a {
+    font-size: 25px;
+  }
+
+  .newsB {
+    display: flex;
+    margin: 0;
   }
 }
 /* rozložení hlavní stránky */
@@ -307,6 +319,10 @@ textarea {
   .menu {
     margin: 0;
     padding: 0 10xp;
+  }
+
+  .menu__item {
+    margin-left: 20px;
   }
 
   .hero__text h1 {
