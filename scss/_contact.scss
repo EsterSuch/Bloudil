@@ -20,7 +20,7 @@
 .contacts {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin: 0 auto;
 }
 
 .contacts p,
@@ -44,7 +44,7 @@
 .contact__item--green {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 .contact__item img,

@@ -85,12 +85,14 @@ textarea {
   text-decoration: none;
 }
 
+
 .button:hover,
-.button--bigger:hover {
+.button--bigger:hover{
   background-color: transparent;
   color: $letter-green;
   cursor: pointer;
 }
+
 .button:hover a,
 .button--bigger:hover a {
   color: $letter-green;
