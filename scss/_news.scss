@@ -13,10 +13,10 @@
 }
 .news__item p {
   margin: 0 0 15px 0;
-  color: $letter-main;
+  color: $letter-green;
 }
 .news__index a {
-  color: $bgd-section;
+  color: $bgd-ultra-light;
 }
 .article {
   padding: 0 20px;
@@ -27,9 +27,9 @@
 }
 .article__text a {
   text-decoration: none;
-  color: $letter-second;
+  color: $letter-white;
     &:hover{
-      border-bottom: 1px solid $letter-main;
+      border-bottom: 1px solid $letter-green;
     }
 }
 .article__img {
@@ -39,42 +39,42 @@
 }
 
 .article__content {
-  color: $letter-second;
+  color: $letter-white;
 }
 .article__content h4{
-  color: $letter-main;
+  color: $letter-green;
 }
 .article__content a {
   text-decoration: none;
-  color: $letter-main;
+  color: $letter-green;
 }
 
 .news__item a {
   text-decoration: none;
-  color: $letter-main;
+  color: $letter-green;
 }
 
 /*CSS pro novinky na hlavní stránce*/
 .index__item h2 {
-  color: $bgd-main;
+  color: $bgd-dark;
 }
 .news__item h2 {
   font-size: 20px;
 }
 .news__item p {
   font-size: 12px;
-  color: $letter-main;
+  color: $letter-green;
 }
 .index__item {
   text-align: center;
 }
 .index__item a {
   text-decoration: none;
-  color: $bgd-main;
+  color: $bgd-dark;
   font-size: 20px;
 }
 .index__item p {
-  color: $bgd-main;
+  color: $bgd-dark;
   font-size: 12px;
   text-align: center;
 }
@@ -87,8 +87,6 @@
 .news--count{
   margin: 0;
 }
-
-
 
 @media screen and (min-width: 990px){
   .news__list {

@@ -1,0 +1,51 @@
+@use 'colors' as *;
+
+.sponsors {
+  background-color: $letter-white;
+  padding: 15px 0;
+}
+
+.sponsors__photo {
+  display: grid;
+  grid-template-columns: repeat (auto-fill, 1, 1fr);
+  margin: 30px auto; 
+  gap: 10px;
+}
+
+.sponsors__photo img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  object-fit: cover;
+  border: 1px solid $bgd-dark;
+ }
+
+
+.sponsors h3 {
+  text-align: center;
+  font-size: 30px;
+  color: $bgd-dark;
+}
+
+.sponsors p {
+  margin: 0 0 15px 0;
+  color: $bgd-dark;
+}
+
+@media screen and (min-width: 550px) {
+.sponsors__photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 990px){
+ .sponsors__photo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+  }
+}

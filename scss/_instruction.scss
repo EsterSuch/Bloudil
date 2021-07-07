@@ -10,7 +10,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  color: $letter-main;
+  color: $letter-green;
   font-size: 20px;
   margin-top: 5px;
 }
@@ -19,13 +19,13 @@
 .instruction p{
   padding: 0;
   margin: 0;
-  color: $letter-second;
+  color: $letter-white;
   font-size: 20px;
 }
 
 .instruction a {
   text-decoration: none;
-  color: $letter-second;
+  color: $letter-white;
 }
 
 .instruction__text{
@@ -40,30 +40,30 @@
   margin: 0;
 }
 .instruction__item p, li{
-  color: $letter-second;
+  color: $letter-white;
   margin: 0;
   font-size: 18px;
 }
 .instruction__item a{
   text-decoration: none;
-  color: $letter-main
+  color: $letter-green;
 }
 .instruction__item li{
   list-style-type: none;
 }
 
 #penalizace {
-  color: $letter-second;
+  color: $letter-white;
   margin-top: 5px;
 }
 .title--second {
   font-size: 14px;
-  color: $letter-main;
+  color: $letter-green;
   margin-top: 10px;
 }
 
 #penalizace li {
-  color: $letter-second;
+  color: $letter-white;
   margin-top: 5px;
 }
 

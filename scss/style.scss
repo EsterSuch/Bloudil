@@ -1,94 +1,144 @@
 @use 'colors' as *;
-@use 'forms-btn' as *;
-@use 'menu' as *;
-@use 'footer' as *;
-@use 'instruction' as *;
-@use 'tables' as *;
-@use 'photo' as *;
+@use 'boxes' as *;
 @use 'contact' as *;
+@use 'footer' as *;
+@use 'forms-btn' as *;
+@use 'hero' as *;
+@use 'instruction' as *;
+@use 'menu' as *;
 @use 'news' as *;
+@use 'photo' as *;
+@use 'sponsors' as *;
+@use 'tables' as *;
 
 
-html { 
-  box-sizing: border-box; 
-   height: 100%;
+html {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-*, ::after, ::before { box-sizing: inherit; }
 
-body{
-  font-family: $font;
-  background-color:  $bgd-second;
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: $bgd-dark;
   margin: 0 auto;
   padding: 0;
-  color: $letter-main;
+  color: $letter-green;
   height: 100%;
 }
-.sirka{
+
+.sirka {
   max-width: 1100px;
   margin: 0 auto;
   padding: 15px;
 }
 
+.sirka--white{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: $letter-white;
+}
+
 .bgd-mainPage{
-  background-color: $letter-second;
+  background-color: $letter-white;
+}
+.bgd--dark {
+  background-color: $bgd-dark;
+}
+.sipka {
+  bottom: 0;
+  right: 10px;
+  position: fixed;
+}
+
+.sipka img {
+  background-color: $letter-green;
+  width: 30px;
+}
+.empty__space {
+  min-height: 500px;
+}
+
+/* rozložení hlavní stránky */
+.main__layout {
+  min-height: 800px;
+  background: linear-gradient(black, rgba(0, 0, 0, 0) 90%), url("/images/hero-bw.jpg") no-repeat center/cover;
+  margin: 0;
+}
+
+/* třída pro menu na dalších stránkách*/
+.page__layout {
+  margin-bottom: 50px;
+  /*border-bottom: 1px solid $letter-green;*/
+  background-color: $bgd-dark;
+}
+
+.header__layout {
+  border-bottom: 1px solid $letter-green;
+}
+.border--no {
+  border-bottom: none;
+}
+
+.header__layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+@media screen and (min-width: 600px) {
+  .main__layout {
+   min-height: 900px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header__layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+ .main__layout {
+   display: flex;
+   flex-direction: column;
+ }
+
+  .header__layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 
 /*JEDNOTLIVÉ SEKCE HLAVNÍ STRÁNKY*/
 
-/*boxíky s info, jak závod probíhá*/
-.box{
-  display: block;
-  padding: 20px 0;
-  justify-content: center;
-}
-
-.box__item{
-  display: flex;
-  flex-direction: column;
-  background-color: $letter-second;
-  padding: 10px;
-  text-align: center;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.middle {
-  margin: 0;
-  border-top: 1px solid $letter-main;
-}
-
-.box__item--mini{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.box__item h3 {
-  color: $bgd-main;
-}
-.box__item p{
-  margin: 0;
-  margin-top: 15px;
-  color: $bgd-main;
-}
-#auto, #kolo, #finish{
-  height: 50px;
-  width: 50px;
-}
-
 /* Novinky*/
-
-.news__section{
+.news__section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   padding: 0;
+}
+.news__title--main {
+  color: $letter-green;
+  font-size: 24px;
+  margin: 0 auto;
 }
 
 .news__section h2 {
   text-align: center;
-  color: $bgd-main;
+  color: $bgd-dark;
   margin: 0;
 }
 
@@ -97,184 +147,98 @@ body{
   flex-direction: column;
   margin: 0;
 }
+
 .news--count {
   display: none;
 }
 
+
 /*fotky na hlavní stránce*/
 
 .gallery {
-  background-color: $bgd-main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: $bgd-dark;
   margin: 0;
   padding: 0;
 }
+
 .gallery__photo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0;
-  margin-bottom: 10px;
-}
-
-.gallery__img img {
-  width: 100%;
-  height: 100%;
   margin: 0;
 }
-
-
-/*Sponzoři*/
-.sponsors{
-  background-color: $letter-second;
-  padding: 15px 0;
-}
-.sponsors__foto{
-  display: flex;
-  flex-direction: column;
-  margin: 30px auto;
-  padding: 10px 0;
-}
-.sponsors__foto img{
-  max-height: 100%;
+.photo--bigger img{
   max-width: 100%;
+  height: auto;
+  margin: 0;  
+  display: block;
 }
-.border {
-  border: 1px solid $bgd-main;
-}
-.sponsors__foto a {
-  margin-bottom: 10px;
-}
-.sponsors h3{
-  text-align: center;
-  font-size: 30px;
-  color: $bgd-main;
+.photo--bigger {
+  overflow: hidden;
 }
 
-.sponsors p{
-  margin: 0 0 15px 0;
-  color: $bgd-main;
+.photo--bigger:hover img {
+transform: scale(1.02);
 }
+
 
 /*Oblast s mapou a kontakty*/
-
-.mapa{
-  background-color: $letter-second;
+.mapa {
+  background-color: $letter-white;
   padding: 15px;
   margin: 0 auto;
   text-align: center;
 }
 
-/*MEDIA QUERY PRO MIN 550px*/
+.mapa iframe {
+   max-width: 100%;
+   height: auto;
+  }
+
 
 @media screen and (min-width: 550px) {
-  .box {
-    display: flex;
-    flex-direction: row;
-    margin: 0; 
-    padding: 0;
-  }
- 
-  .box__item {
-    flex-basis: calc(100% / 3);
-    margin: 0 5px;
-    padding: 10px;
-  }
-  .middle {
-    border-top: none;
-    border-left: 1px solid $letter-main;
-  }
-
   .gallery__photo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-  }
-  .gallery__img {
-    width: 100%;
-    height: 100%;
   }
 
   .news {
-    display: none;
-  }
-  .news--count {
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
-
-  .news--count {
-    justify-content: space-around;
-    flex-direction: row;
-    margin: 0 auto;
+  .index__item {
+    width: 175px;
+    margin: 0 55px;
   }
-  .sponsors__foto {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-  }
-  .sponsors__foto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    justify-items: center;
-  }
+  
   .mapa iframe {
     width: 100%;
   }
 }
 
 
-/*   MEDIA QUERY PRO MIN 990px   */
-
-@media screen and (min-width: 990px){
-  .hero__text h1{
-    font-size: 50px;  
-  }
-  .hero__text p{
-    font-size: 35px;
-  }
-  
-  .box {
-    display: flex;
-    margin: 0;
-  }
-  .box__item {
-    display: flex;
-
-    flex-basis: calc(100% / 3);
-    overflow: hidden;
-    margin: 0 5px;
-    justify-content: flex-start;
-  }
-  
-  .news{
+@media screen and (min-width: 800px) {
+  .news {
     display: none;
   }
+
   .news--count {
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
     flex-direction: row;
     margin: 0 auto;
   }
-  
-  .news--count h2{
+}
+/*   MEDIA QUERY PRO MIN 990px   */
+@media screen and (min-width: 990px) {
+  .news--count h2 {
     text-align: center;
   }
-  .news--count a{
+
+  .news--count a {
     font-size: 20px;
   }
-  .sponsors__foto{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
-  }
-  .gallery__photo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-
 }
 

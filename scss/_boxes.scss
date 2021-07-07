@@ -1,0 +1,88 @@
+@use 'colors' as *;
+
+/*boxíky s info, jak závod probíhá*/
+.box {
+  display: block;
+  padding: 20px 0;
+  justify-content: center;
+  background-color: $letter-white;
+}
+
+.box__item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 5px 5px 40px -10px rgba(0,0,0,0.26);
+}
+
+.middle {
+  margin: 20px 0;
+}
+
+.box__item--mini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box__item h3 {
+  color: $bgd-dark;
+}
+
+.box__item p {
+  margin: 0;
+  margin-top: 15px;
+  color: $bgd-dark;
+}
+
+#auto, #kolo, #finish {
+  height: 50px;
+  width: 50px;
+}
+
+@media screen and (min-width: 550px) {
+  .box {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0;
+    padding: 0;
+  }
+
+  .box__item {
+    flex-basis: calc(100% / 3);
+    margin: 0;
+    padding: 10px;
+  }
+
+  .middle {
+    border-top: none;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .box-mini {
+    display: flex;
+  }
+
+  .box-mini h3 {
+    padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .box {
+    display: flex;
+  }
+
+  .box__item {
+    display: flex;
+    flex-basis: calc(100% / 3);
+    overflow: hidden;
+    margin: 0 20px;
+    justify-content: flex-start;
+    box-shadow: 5px 5px 40px -10px rgba(0,0,0,0.26);
+  }
+}

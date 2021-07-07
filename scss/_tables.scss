@@ -11,7 +11,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   max-width: 1000px;
-  border: 1px solid $letter-main;
+  border: 1px solid $letter-green;
 }
 .table__layout h2 {
   margin: 0 0 20px 0;
@@ -19,22 +19,22 @@ table {
 th, 
 td {
   text-align: center;
-  border: 1px solid $letter-main;
+  border: 1px solid $letter-green;
   padding: 3px;
 }
 td {
-  color: $letter-second;
+  color: $letter-white;
 }
 
 .tab-title th{
-  background-color: $bgd-main;
+  background-color: $bgd-dark;
   padding: 2px;
 }
 
 .result a{
   display: block;
   text-decoration: none;
-  color: $letter-main;
+  color: $letter-green;
 }
 
 @media screen and (min-width: 990px) {

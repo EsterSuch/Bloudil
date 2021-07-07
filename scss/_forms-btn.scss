@@ -1,7 +1,7 @@
 @use 'colors' as *;
 
-/*FORMULÁŘ REGISTRACE*/
 
+/*FORMULÁŘ REGISTRACE*/
 .form {
   width: 100%;
   max-width: 450px;
@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-.form-title h2{
+.form-title h2 {
   text-align: left;
   padding: 0;
   margin: 0 0 20px 0;
@@ -20,47 +20,53 @@
 .form__item,
 .form__radio,
 .form__select select,
-.form__mes{
+.form__mes {
   display: block;
   margin-bottom: 30px;
 }
+
 .form__item input,
 .form__mes textarea,
-.form__select select{
+.form__select select {
   width: 100%;
   margin-top: 5px;
   height: 30px;
-  background-color: $bgd-main;
-  color: $letter-second;
+  background-color: #4a4a4f;
+  color: $letter-white;
   font-size: 13px;
-  font-family: $font;
+  font-family: "Raleway", sans-serif;
 }
+
 .form__item label,
+.radio__item label,
 .form__item legend,
 .form__mes legend,
 .form__radio legend {
   font-size: 16px;
-  color: $letter-main;
+  font-weight: bold;
+  color: $letter-green;
   margin-bottom: 10px;
 }
-.radio__item [type="radio"]{
+
+.radio__item [type=radio] {
   margin: 5px 0;
   height: 15px;
   width: 15px;
+  font-weight: bold;
 }
 
-.form__mes textarea{
+.form__mes textarea {
   height: 150px;
   padding: 12px 10px;
   resize: none;
 }
 
-.form__item [type="text"],
-.form__item [type="email"],
+.form__item [type=text],
+.form__item [type=email],
 select,
-textarea{
+textarea {
   border: none;
-  border-bottom: 3px solid $letter-main;
+  border-bottom: 3px solid $letter-green;
 }
 
 .registr {
@@ -69,57 +75,33 @@ textarea{
 
 .button,
 .button--bigger {
-  background-color: $letter-main;
-  color: $letter-second;
-  border: 2px solid $letter-main;
-  border-radius: 20px;
-  display: flex;
+  background-color: $letter-green;
+  color: $letter-white;
+  border: 2px solid $letter-green;
+  display: inline-block;
   padding: 5px 10px;
-  margin: 0 auto;
-  font-size: 16px;
-  margin-bottom: 15px;
-
-    & a {
-      text-decoration: none;
-      color: $letter-second;
-    }
-    &:hover {
-      background-color: transparent;
-      color: $letter-main;
-      cursor: pointer;
-    }
-    &:hover a {
-      color: $letter-main;
-    }
-  }
-  
-.sipka {
-  bottom: 0;
-  right: 10px;
-  position: fixed;
-  }
-
-.sipka img {
-  background-color: $letter-main;
-  width: 30px;
+  font-size: 25px;
+  margin-top: 15px;
+  text-decoration: none;
 }
 
-@media screen and (min-width: 700px){
+.button:hover,
+.button--bigger:hover {
+  background-color: transparent;
+  color: $letter-green;
+  cursor: pointer;
+}
+.button:hover a,
+.button--bigger:hover a {
+  color: $letter-green;
+}
+
+@media screen and (min-width: 700px) {
   .form {
     margin: 0 80px;
   }
+
   .registr {
     margin: 0 auto;
   }
-  .button--bigger {
-    margin-top: 50px;
-    padding: 15px 20px;
-      & a {
-        font-size: 25px;
-      }
-    }
-    .newsB {
-      display: flex;
-      margin: 0;
-    }
-  }
+}

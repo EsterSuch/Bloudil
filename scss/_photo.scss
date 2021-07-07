@@ -1,7 +1,7 @@
 @use 'colors' as *;
 
-.video, 
-.photo{
+.video,
+.photo {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -12,65 +12,67 @@
   margin: 0 10px;
 }
 
-.video iframe{
-  max-width: 100% ;
+.video iframe {
+  max-width: 100%;
   height: 100%;
   margin-bottom: 20px;
 }
 
-.video p, 
-.photo p{
+.video p,
+.photo p {
   font-size: 18px;
   margin: 0 0 10px 0;
 }
 
 .photo a {
   text-decoration: none;
-  color: $letter-second;
+  color: white;
   margin: 0;
 }
 
 .photo__list {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 3px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3px;
   grid-auto-flow: row dense;
 }
 
 .photo__list img {
-	width: 100%;
+  width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   justify-items: center;
 }
 
 @media screen and (min-width: 600px) {
-  .photo__list a:nth-child(5n){
+  .photo__list a:nth-child(5n) {
     grid-column: span 2;
     grid-row: span 2;
   }
+
   .video {
     align-items: center;
   }
+
   .video iframe {
     width: 560px;
     height: 315px;
   }
 }
 
-
 @media screen and (min-width: 990px) {
   .video__layout {
     display: flex;
     justify-content: space-around;
   }
+
   .video {
     margin: 0 10px;
   }
 
-  .photo__list a:nth-child(6n){
+  .photo__list a:nth-child(6n) {
     grid-column: span 2;
     grid-row: span 2;
   }
 }
-/*width="560" height="315"*/

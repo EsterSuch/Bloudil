@@ -32,72 +32,78 @@
   </head>
   <body>
     
- <section class="main__layout">
-      <!--<section class="sirka">-->
-
-       <div class="header__layout"> 
-         
-          <div class="top">
-            <div class="logoM" id="nahoru">
-              <a href="/"><img src="/images/BB-logo-obr.png"></a>
-            </div>
-              <a href="/"><p>MTBO závody</p></a>
-          </div>
-
-          <nav class="menu">
-          <ul class="menu__list">
-            
-              <li class="menu__item {{'menu__item--active' if page.fileSlug === 'aktuality'}}">
-              <a class="menu__link" href="/aktuality/">Aktuality</a>
-              </li>
-
-              <li class="menu__item {{'menu__item--active' if page.fileSlug === 'registrace'}}">
-              <a class="menu__link" href="/registrace/">Registrace</a>
-              </li>
-
-              <div class="menu__mobil">
-
- 
-                <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-                <label for="menu-checkbox" class="menu__toggler">Více</label>
+   <section class="main__layout">
       
 
-              <div class="menu__mobil--hidden">  
-
-                <li class="menu__item {{'menu__item--active' if page.fileSlug === 'startovka'}}">
-                <a class="menu__link" href="/startovka/">Startovní listina</a>
-                </li>
-
-                <li class="menu__item {{'menu__item--active' if page.fileSlug === 'vysledky'}}">
-                <a class="menu__link" href="/vysledky/">Výsledky</a>
-                </li>
-
-                <li class="menu__item {{'menu__item--active' if page.fileSlug === 'fotovideo'}}">
-                <a class="menu__link" href="/fotovideo/">Foto&nbsp;& video </a>
-                </li>                
-
-                <li class="menu__item {{'menu__item--active' if page.fileSlug === 'propozice'}}">
-                <a class="menu__link" href="/propozice/">Propozice</a>
-                </li>
-                <li class="menu__item {{'menu__item--active' if page.fileSlug === 'kontakt'}}">
-                <a class="menu__link" href="/kontakt/">Kontakt</a>
-                </li>
-              </div>
-            </div>
-          </ul>
-          </nav>
-        
+   <div class="header__layout border--no">      
+     <div class="top">
+       <div class="logoM" id="nahoru">
+         <a href="/"><img src="/images/BB-logo-obr.png"></a>
        </div>
-    
-      <div class="hero__text">
-        <h1>Chceš překonat svoje limity?</h1>
-        <h1>Chceš zažít adrenalin?</h1>
+     </div>
+   
+
+   <nav class="menu">
+    <ul class="menu__list">
         
-        <button class="button--bigger"><a href="/registrace/">ZAREGISTRUJ SE</a></button>
+      <div class="menu--style">
+
+        <li class="menu__item {{'menu__item--active' if page.fileSlug === 'aktuality'}}">
+          <a class="menu__link" href="/aktuality/">AKTUALITY</a>
+        </li>
+
+        <li class="menu__item {{'menu__item--active' if page.fileSlug === 'registrace'}}">
+          <a class="menu__link" href="/registrace/">REGISTRACE</a>
+        </li>
+      </div>
+
+      <div class="menu--style">
+
+        <div class="menu__mobil">
+
+          <button onclick="myFunction()" class="menu__toggler">ZÁVODY</button>
+              
+            <div id="menu__mobil--hidden" class="dropdown-content">
+
+              <li class="menu__item {{'menu__item--active' if page.fileSlug === 'startovka'}}">
+                <a class="menu__link" href="https://bukovskybloudil.netlify.app/" target="_blank">Startovní listina</a>
+              </li>
+
+              <li class="menu__item {{'menu__item--active' if page.fileSlug === 'vysledky'}}">
+                <a class="menu__link" href="/vysledky/">Výsledky</a>
+              </li>
+
+              <li class="menu__item {{'menu__item--active' if page.fileSlug === 'fotovideo'}}">
+                <a class="menu__link" href="/fotovideo/">Foto & Video</a>
+              </li>                
+
+              <li class="menu__item {{'menu__item--active' if page.fileSlug === 'propozice'}}">
+                <a class="menu__link" href="/propozice/">Propozice</a>
+              </li>
+
+            </div>
+        </div>
+          
+              <li class="menu__item {{'menu__item--active' if page.fileSlug === 'kontakt'}}">
+                <a class="menu__link" href="/kontakt/">KONTAKT</a>
+              </li>
+                
+      </div>
+          
+    </ul>
+   </nav>
+   </div>  
+
+      <div class="hero__text">
+        <h1>ZAŽIJ ADRENALIN</h1>
+        <h1>PŘEKONEJ LIMITY</h1>
+        <p>Orientační závod na horských kolech.</p>
+        <p>5 hodin. Plno zážitků.</p>
+        
+        <a class="button--bigger" href="/registrace/">REGISTRACE</a>
       </div>
 
 
-    <!--</section>-->
  </section>
 <main>
 

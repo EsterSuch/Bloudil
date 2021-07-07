@@ -1,0 +1,70 @@
+@use 'colors' as *;
+
+/*  HERO SEKCE   */
+.hero__text {
+  text-align: left;
+  justify-content: left;
+  align-items: right;
+  color: $letter-green;
+  margin: 40px auto;
+  margin-left: 10%;
+}
+  
+ 
+.hero__text h1 {
+  font-size: 30px;
+  margin: 0 0 25px 0;
+  padding: 0;
+  color: $letter-white;
+  text-shadow: 0px 4px 20px $letter-green;
+}
+
+.hero__text p {
+  margin: 0 0 15px 0;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.button--bigger {
+    margin-top: 60px;
+    padding: 10px 20px;
+  }
+
+.button--bigger a {
+    font-size: 25px;
+  }
+
+@media screen and (min-width: 600px) {
+  .hero__text h1 {
+    font-size: 40px;
+  }
+
+  .hero__text p {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  .hero__text h1 {
+    font-size: 50px;
+  }
+
+  .hero__text p {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+   .hero__text{
+      top: 250px;
+      left: 250px;
+    }
+  .hero__text h1 {
+    font-size: 50px;
+  }
+
+  .hero__text p {
+    font-size: 35px;
+  }
+}
