@@ -104,6 +104,7 @@
  .menu__link:hover, .menu__toggler:hover {
     font-weight: 800;
     border-bottom: 1px solid $letter-green;
+    cursor: pointer;
   }
 
 .menu__item--active {
